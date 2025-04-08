@@ -1,0 +1,3 @@
+user_id,email,status,access_granted,last_login
+003,sarah.connor@company.com,terminated,True,2024-02-10
+004,lee.chen@company.com,terminated,False,2023-11-02

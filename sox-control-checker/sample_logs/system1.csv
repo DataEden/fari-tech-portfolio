@@ -1,0 +1,3 @@
+user_id,email,status,access_granted,last_login
+001,jane.doe@company.com,terminated,True,2023-10-12
+002,john.smith@company.com,active,True,2024-01-18
