@@ -1,4 +1,4 @@
-## **Project 1: SOX Control Testing Automation with Python**
+## **SOX Control Testing Automation with Python**
 
 **Overview:**  
 This project simulates a typical SOX (Sarbanes-Oxley) IT General Controls (ITGC) testing task using Python. It demonstrates the use of Python to read, parse, and validate control evidence data across multiple CSV logs.
