@@ -57,28 +57,9 @@ This kind of automation saves time during quarterly SOX testing cycles, improves
 **Outcome:**
 This project gives you a foundational, resume-ready internal audit automation tool to showcase during interviews. It can also be extended further with real access logs, additional rules, or output formatting for audit reports.
 
----
-
-**Project 2: Power BI + Python Audit Dashboard**
-
-**Overview:**
-This project combines a Python ETL script with a Power BI dashboard that visualizes system access trends, audit issues by severity, and remediation statuses.
-
-**Skills Demonstrated:**
-- Data transformation using Python (pandas)
-- Dashboard design in Power BI
-- Visual storytelling and metric reporting (KRI/KPI)
-- Audit-focused visuals: open vs. closed issues, SOX vs. operational issues, aging buckets
-
-**Files:**
-- `audit_etl.py`: Reads and cleans audit logs or issue tracker CSVs, outputs summarized data for Power BI.
+data for Power BI.
 - `dashboard.pbix`: Power BI file showing interactive audit visuals
 - `README.md`: Describes how the data flows from raw logs to visual insights
 
 **Outcome:**
 Demonstrates how modern auditors can use visualization and automation to track progress, prioritize risks, and report findings to executives with clarity.
-
----
-Let me know when you want to dive into building the Power BI pipeline next!
-
-
