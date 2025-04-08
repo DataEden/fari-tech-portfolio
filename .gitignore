@@ -20,7 +20,5 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
-# git
-.git
 # Virtual env
 *.env
