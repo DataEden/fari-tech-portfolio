@@ -36,7 +36,7 @@ This project simulates a typical SOX (Sarbanes-Oxley) IT General Controls (ITGC)
 This kind of automation saves time during quarterly SOX testing cycles, improves accuracy, and demonstrates how auditors can apply scripting skills to streamline review tasks.
 
 ---
-
+## Planned Project - Upcoming:
 **Project 2: Power BI + Python Audit Dashboard**
 
 **Overview:**  
