@@ -59,9 +59,10 @@ user_id,email,status,access_granted,last_login
 004,lee.chen@company.com,terminated,False,2023-11-02
 ```
 
-**README.md (content):**
-```
-# SOX Control Checker
+## README.md:
+
+
+**SOX Control Checker**
 
 This Python tool automates the review of system access logs to identify SOX ITGC violations such as terminated users with active accounts.
 
@@ -82,16 +83,16 @@ This Python tool automates the review of system access logs to identify SOX ITGC
    ```
 4. Check `violations_report.csv` for flagged entries
 
-## Why This Matters
+**Why This Matters**
 This kind of automation saves time during quarterly SOX testing cycles, improves accuracy, and demonstrates how auditors can apply scripting skills to streamline review tasks.
-```
+
+---
 
 **requirements.txt:**
-```
+```bash
 pandas
 ```
-
-**Outcome:**
+## Outcome:
 This project gives you a foundational, resume-ready internal audit automation tool to showcase during interviews. It can also be extended further with real access logs, additional rules, or output formatting for audit reports.
 
 ---
