@@ -1,6 +1,6 @@
 # Fari (Far-Eye) Lindo - Tech Portfolio
 
-Welcome to my technical portfolio. This repository is a curated showcase of my hands-on technical experience, certifications, and aligned project work for roles in audit analytics, data analytics, machine learning, and cloud infrastructure. I created this to help hiring managers, recruiters, and collaborators gain insight into both my capabilities and commitment to excellence.
+Welcome to my technical portfolio. This repository is a showcase of my hands-on technical experience, certifications, and aligned project work for roles in audit analytics, data analytics, machine learning, and cloud infrastructure. I created this to help hiring managers, recruiters, and collaborators gain insight into both my capabilities and commitment to excellence.
 
 ---
 
