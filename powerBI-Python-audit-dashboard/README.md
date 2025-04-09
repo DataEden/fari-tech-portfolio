@@ -83,7 +83,3 @@ This project shows how modern audit teams can move beyond spreadsheets and build
 - Improve clarity in executive reporting
 - Track audit remediation in real-time
 - Add value to control monitoring using data-driven visuals
-
----
-
-**Stay tuned — next, we’ll build the actual ETL script together!** 👨🏽‍💻📊
