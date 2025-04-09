@@ -21,8 +21,6 @@ This section highlights hands-on, audit-relevant work using automation and data 
 - Fullstack Academy – Data Analytics Bootcamp  
 - The Knowledge House 2025 Data Science Innovative Fellowship *(current)*  
 
-📂 Folder: `internal-audit-analyst/`
-
 ---
 
 ## 📊 Data Analyst  
@@ -50,7 +48,7 @@ Applied machine learning workflows for classification, clustering, and sentiment
 - Deep learning image classifiers: VGG16, DenseNet, ResNet, MobileNet  
 - Model optimization and performance tracking  
 
-📂 Folder: `ai/ml-engineer/`
+📂 Folder: `ai-ml-data-science-data-engineer/`
 
 ---
 
@@ -65,10 +63,10 @@ This section demonstrates infrastructure knowledge across AWS and Windows Server
 - IAM access controls, S3 storage logic  
 - Bash scripting, API integrations, infrastructure diagrams  
 
-📂 Folder: `IT/cloud-infrastructure/`
+📂 Folder: `IT-and-cloud-infrastructure/`
 
 ---
-## **Project 1: SOX Control Testing Automation with Python**
+## **SOX Control Testing Automation with Python:**
 
 **Overview:**  
 This project simulates a typical SOX (Sarbanes-Oxley) IT General Controls (ITGC) testing task using Python. It demonstrates the use of Python to read, parse, and validate control evidence data across multiple CSV logs.
@@ -104,9 +102,10 @@ This project simulates a typical SOX (Sarbanes-Oxley) IT General Controls (ITGC)
 **Why This Matters:**  
 This kind of automation saves time during quarterly SOX testing cycles, improves accuracy, and demonstrates how auditors can apply scripting skills to streamline review tasks.
 
+📂 Folder: `sox-control-checker/`
+
 ---
-## Planned Project - Upcoming:
-**Project 2: Power BI + Python Audit Dashboard**
+## **Power BI + Python Audit Dashboard:**
 
 **Overview:**  
 This project combines a Python ETL script with a Power BI dashboard that visualizes system access trends, audit issues by severity, and remediation statuses.
@@ -124,6 +123,8 @@ This project combines a Python ETL script with a Power BI dashboard that visuali
 
 **Outcome:**  
 Demonstrates how modern auditors can use visualization and automation to track progress, prioritize risks, and report findings to executives with clarity.
+
+📂 Folder: `powerBI-Python-audit-dashboard/`
 
 ---
 
