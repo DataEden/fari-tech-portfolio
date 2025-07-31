@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# images
+pet_images/
+
 # C extensions
 *.so
 
