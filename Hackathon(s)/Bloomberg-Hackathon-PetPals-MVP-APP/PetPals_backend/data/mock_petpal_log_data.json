@@ -1,0 +1,44 @@
+[
+  {
+    "pet_id": 1,
+    "pet_name": "Baki",
+    "events": [
+      {
+        "type": "meal",
+        "timestamp": "2025-06-24T08:00:00Z",
+        "value": "1 cup dry food"
+      },
+      {
+        "type": "walk",
+        "timestamp": "2025-06-24T10:00:00Z",
+        "value": "30 minutes"
+      },
+      {
+        "type": "measurement",
+        "timestamp": "2025-06-24T18:00:00Z",
+        "value": "19.5 lbs"
+      }
+    ]
+  },
+  {
+    "pet_id": 2,
+    "pet_name": "Milo",
+    "events": [
+      {
+        "type": "meal",
+        "timestamp": "2025-06-24T09:00:00Z",
+        "value": "0.5 cup wet food"
+      },
+      {
+        "type": "walk",
+        "timestamp": "2025-06-24T11:30:00Z",
+        "value": "20 minutes"
+      },
+      {
+        "type": "measurement",
+        "timestamp": "2025-06-24T18:00:00Z",
+        "value": "15.2 lbs"
+      }
+    ]
+  }
+]
