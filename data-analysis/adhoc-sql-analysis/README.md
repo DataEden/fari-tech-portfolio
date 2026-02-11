@@ -1,43 +1,145 @@
-# Instagram Ad-hoc Analysis
+# Market.db Business Performance Report
 
-You are a data analyst at a NYC-based wholesale food supplier called Osiris-Foods. As part of your companies mission to make more data-driven decisions, you are tasked with generating an ad-hoc report on your companies database. You will report on descriptive statistics using SQL and generate respective visualizations using pandas to provide your company an overview of its' past performance.
+**Role:** Data Analyst (Portfolio Project)\
+**Stack:** SQLite • SQL • Python • Pandas • Matplotlib • Seaborn •
+Jupyter
 
-For this project, you will analyze an ERD diagram to formulate DML SQL queries within a Jupyter notebook, and provide a write-up of your findings. 
+---
 
-Keep in mind that your write-up should include pertinent numerical details to back your findings. Any claim that you make must be supported by evidence!
+## Overview
 
-## Instructions
+This project is an ad-hoc business performance analysis using a
+relational SQLite database (`Market.db`, Northwind-style schema).
 
-### Market.db
+![ERD Diagram](/data-analysis/adhoc-sql-analysis/images/Northwind_E-R_Diagram.png)  
+<center> <b> ERD Diagram of Market.db Schema </center>
 
-Before beginning your project, we recommend checking out the ERD diagram below:
+The objective was to simulate a real-world analyst workflow: interpret a
+normalized ERD, construct SQL queries to answer business questions,
+validate outputs, and communicate findings using data visualizations and
+statistical analysis.
 
-![ERD Diagram](/images/Northwind_E-R_Diagram.png)  
-*ERD Diagram of Market Database*
+All insights in this project are supported by query outputs shown in the
+notebook.
 
-Use this ERD diagram to formulate how you should form your joins across tables and to find out more about your table's columns.
+---
 
-If you download the `sqlite3` VSCode extension, you will also be able to open your database within your code editor to view the content and columns of your table.
+## Data Source & Schema
 
-Note that you can also test out your SQL queries in `sqlite3` by opening your database in your command line or terminal. Check out the [guide](https://datacarpentry.github.io/sql-socialsci/instructor/08-sqlite-command-line.html) for more information on how to interact with your database in the shell.
+ERD file location: `images/Northwind_E-R_Diagram.png`
 
-### adhoc_report.ipynb
+### Core Tables Used
 
-Within this Jupyer notebook, you will write Python code and SQL queries to answer 8 ad-hoc questions. Each question will involve you creating an appropriate DML SQL query and observing this output.
+-   **Customers** (`CustomerID`)
+-   **Orders** (`OrderID`, `CustomerID`, `ShipperID`)
+-   **OrderDetails** (`OrderID`, `ProductID`, `Quantity`)
+-   **Products** (`ProductID`, `SupplierID`, `Price`)
+-   **Suppliers** (`SupplierID`)
+-   **Shippers** (`ShipperID`)
 
-After you've verified that your query's output sufficiently answers the question, you will then create a pandas dataframe using this output and finally generate a visualization from this dataframe.
+### Join Relationships
 
-Just as in the `weather-analysis` project, we will not directly indicate which visualizations you should make. Instead, we ask that you use your notes and study material to discern appropriate visualizations.
+Customers (1) ──── (n) Orders\
+Orders (1) ──── (n) OrderDetails\
+Products (1) ──── (n) OrderDetails\
+Suppliers (1) ──── (n) Products\
+Shippers (1) ──── (n) Orders
 
-Test your queries in the shell, and be sure to *iteratively* build your queries. Especially when we are first learning SQL, we rarely come up with an immediate answer. Start with your basic structure (`SELECT ... FROM ...`) and build up to the correct answer.
+---
 
-## Submission 
+## Data Dictionary (Fields Used in Analysis)
 
-Your first checkpoint for this project will be due by `6/20`. The final due date for this project is `6/27`. 
+  Table          Column      Description
+  -------------- ----------- --------------------------------
+  Products       Price       Unit selling price (EUR)
+  OrderDetails   Quantity    Units ordered per product line
+  Orders         OrderDate   Date order was placed
+  Customers      Country     Customer location
+  Suppliers      Country     Supplier origin
+  Orders         OrderID     Unique transaction identifier
 
-To begin work on this project, you will download this template code and push it to your GitHub repository. 
+---
 
-While there are no tests for this project, be sure to remove all errors from your code before submitting and ensure that the outputs you generate answer each question. 
+## Analyst Query Standards (SOP)
 
-To submit this project, you will submit a link to your completed GitHub repository to Canvas.
+-   **Revenue Definition:** `Revenue = Quantity * Price`
+-   **Order Volume Metric:** Count of distinct `OrderID`
+-   **Supplier Popularity Metric:** Count of distinct orders containing
+    products from a supplier
+-   **Inactive Customers:** Defined using `LEFT JOIN` where
+    `OrderID IS NULL`
+-   **Null Handling:** DISTINCT used where necessary to prevent
+    double-counting
 
+---
+
+## Executive Summary
+
+-   The United States leads in total customers (13) and total orders
+    (29).
+-   Strong positive correlation between customer and supplier count by
+    country (*r = 0.69, p = 0.002*).
+-   The U.S. also has the highest number of inactive customers (5).
+-   Quantity ordered and revenue show strong positive correlation (*r =
+    0.69, p \< 0.01*).
+-   *Laughing Lumberjack Lager* generated the lowest quantity (5 units)
+    and lowest revenue (€70).
+-   *Plutzer Lebensmittelgroßmärkte AG* leads supplier order
+    participation.
+
+---
+
+## Business Questions Answered
+
+1.  Products priced under €10
+2.  Supplier country concentration
+3.  Customer country concentration
+4.  Least popular products by quantity
+5.  Least popular products by revenue
+6.  Countries with the most orders
+7.  Countries with inactive customers
+8.  Most popular suppliers by order participation
+
+Each section includes: - SQL query - Result preview - Visualization -
+Evidence-based interpretation
+
+---
+
+## Strategic Recommendations
+
+1.  Re-engage inactive U.S. customers through targeted campaigns.
+2.  Investigate Brazil's supplier gap (high customers, zero suppliers).
+3.  Evaluate underperforming SKUs for pricing or discontinuation review.
+4.  Strengthen partnerships with high-performing suppliers.
+5.  Explore price elasticity testing for low-volume products.
+
+---
+
+## Repository Structure
+
+```diagram
+market-db-performance-report/
+├─ data/
+│  ├─ Market.db
+│  └─ erd/
+│     └─ Northwind_E-R_Diagram.png
+├─ notebooks/
+│  └─ adhoc_report.ipynb
+├─ src/
+│  ├─ sql_queries.py
+│  └─ db_utils.py
+├─ outputs/
+│  ├─ figures/
+│  └─ tables/
+└─ README.md
+```
+
+---
+
+## Attribution
+
+This project originated from a learning prompt during The Knowledge
+House fellowship.\
+All analysis logic, statistical testing, visualization design, and
+reporting narrative were independently rebuilt and expanded as part of
+my professional portfolio.
