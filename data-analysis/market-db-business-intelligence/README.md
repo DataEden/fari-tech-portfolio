@@ -31,7 +31,7 @@
 This project is an ad-hoc business performance analysis using a
 relational SQLite database (`Market.db`, Northwind-style schema).
 
-![ERD Diagram](/images/northwind_erd_diagram.png)
+![ERD Diagram](images/northwind_erd_diagram.png)
 
 **<div align="center">ERD Diagram of Market.db Schema</div>**
 
