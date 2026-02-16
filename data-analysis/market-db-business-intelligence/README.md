@@ -4,6 +4,8 @@
 
 **Role:** Data Analyst (Portfolio Project)
 
+Business Intelligence Case Study | SQL + Python
+
 ---
 
 ## Tech Stack
