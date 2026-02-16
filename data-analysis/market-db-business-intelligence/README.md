@@ -6,12 +6,32 @@
 
 ---
 
+## Tech Stack
+
+![SQL](https://img.shields.io/badge/SQL-000000?logo=databricks&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)
+![Python](https://img.shields.io/badge/Python-000000?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-000000?logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-000000?logo=jupyter&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C)
+![Seaborn](https://img.shields.io/badge/Seaborn-5B8FA8)
+
+---
+
+![Last Commit](https://img.shields.io/github/last-commit/<username>/<repo-name>)
+![Repo Size](https://img.shields.io/github/repo-size/<username>/<repo-name>)
+![Top Language](https://img.shields.io/github/languages/top/<username>/<repo-name>)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+---
+
 ## Overview
 
 This project is an ad-hoc business performance analysis using a
 relational SQLite database (`Market.db`, Northwind-style schema).
 
-![ERD Diagram](images/Northwind_E-R_Diagram.png)
+![ERD Diagram](images/northwind_e-r_diagram.png)
 
 **<div align="center">ERD Diagram of Market.db Schema</div>**
 
@@ -21,7 +41,9 @@ The objective was to simulate a real-world analyst workflow:
 validate outputs, and communicate findings using data visualizations and
 statistical analysis.
 
-> *All insights are supported by query outputs generated and found in the [project notebook](/data-analysis/dhoc-sql-analysis/notebooks/adhoc_report.ipynb)*.
+> *All insights are supported by query outputs generated and found in the [project notebook](/data-analysis/market-db-business-intelligence/notebooks/adhoc_report.ipynb)*.
+
+---
 
 ## Executive Summary
 
@@ -37,37 +59,33 @@ statistical analysis.
 
 - Inactive customer patterns scale with market size. While countries with more orders tend to have more inactive customers (r = 0.49), the relationship is not statistically significant (p > 0.05), suggesting engagement gaps may vary by market maturity.
 
+---
+
 ## 📊 Visual Highlights
 
 **Figure 1: Inactive Customers by Country**
 
 ![Inactive Customers by Country](images/countries-with-no-orders-by-number-of-customers.png)
 
-*<center>Distribution of customers with zero orders across countries.</center>*
-
----
+*<div align="center">Distribution of customers with zero orders across countries.</div>*
 
 **Figure 2: Relationship Between Total Orders and Inactive Customers by Country (r = 0.49, p = 0.10)**
 
 ![Correlation Between Total Orders and Inactive Customers by Country](images/corr-bet-most-orders-and-no-orders-by-country.png)
 
-*<center>Country-level scatter plot showing the relationship between total orders and customers with no orders. A moderate positive relationship is observed (r = 0.49), though not statistically significant (p > 0.05).</center>*
-
----
+*<div align="center">Country-level scatter plot showing the relationship between total orders and customers with no orders. A moderate positive relationship is observed (r = 0.49), though not statistically significant (p > 0.05).</div>*
 
 **Figure 3: Relationship Between Total Quantity Ordered and Total Revenue by Product (r = 0.69, p < 0.01)**
 
 ![Quantity vs Revenue](images/correlation-quantity-vs-revenue.png)
 
-*<center>Product-level scatter plot showing a strong positive relationship between quantity ordered and total revenue. Revenue performance is primarily volume-driven.</center>*
-
----
+*<div align="center">Product-level scatter plot showing a strong positive relationship between quantity ordered and total revenue. Revenue performance is primarily volume-driven.</div>*
 
 **Figure 4: Supplier Distribution by Country**
 
 ![Suppliers by Country](images/number-of-suppliers-by-country.png)
 
-*<center>Distribution of suppliers by country. The United States, Germany, and France have the highest supplier presence, aligning with customer concentration patterns.</center>*
+*<div align="center">Distribution of suppliers by country. The United States, Germany, and France have the highest supplier presence, aligning with customer concentration patterns.</div>*
 
 ## Detailed Analysis
 
@@ -83,8 +101,6 @@ count and supplier count by country (r = 0.69, p = 0.002).
 imports. Japan, Sweden, and Australia show supplier presence without
 customer concentration.
 
----
-
 ### 2. Revenue Drivers & Product Performance
 
 - Revenue is strongly volume-driven (r = 0.69, p \< 0.01). Increasing
@@ -94,8 +110,6 @@ changes alone.
 - Laughing Lumberjack Lager recorded 5 total units and €70 in revenue,
 indicating potential pricing or demand issues.
 
----
-
 ### 3. Engagement Patterns & Inactive Customers
 
 - The U.S. has both the highest order volume and highest inactive customer
@@ -104,8 +118,6 @@ inactive customers (r = 0.49), it is not statistically significant.
 
 - Brazil and Austria show high order activity with zero inactive
 customers.
-
----
 
 ### 4. Supplier Concentration & Coverage
 
@@ -123,6 +135,8 @@ orders), followed closely by Pavlova Ltd.
 3. Review underperforming SKUs such as Laughing Lumberjack Lager.
 4. Monitor supplier concentration risk.
 5. Focus growth efforts on increasing order frequency.
+
+---
 
 ## Data Source & Schema
 
@@ -199,17 +213,17 @@ This analysis addresses 8 core business questions:
 
 ## Repository Structure
 
-    adhoc-sql-analysis/
+    market-db-business-intelligence/
     ├─ db/
     │  └─ Market.db
     ├─ images/
-    │  └─ Northwind_E-R_Diagram.png
+    │  └─ northwind_e-r_diagram.png
     |  └─ countries-with-no-orders-by-number-of-customers.png
     |  └─ corr-bet-most-orders-and-no-orders-by-country.png
     |  └─ correlation-quantity-vs-revenue.png
     |  └─ number-of-suppliers-by-country.png
     ├─ notebooks/
-    │  └─ Northwind_E-R_a_dhoc_report.ipynb
+    │  └─ adhoc_report.ipynb
     ├─ .gitignore
     ├─ LICENSE.txt 
     ├─ README.md
@@ -231,7 +245,7 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-### Option B --- VS Code SQLite Viewer
+### Option B — VS Code SQLite Viewer
 
 Install the SQLite extension and open:
 
@@ -244,6 +258,8 @@ You may also test queries in the terminal using:
 ```bash
 sqlite3 db/Market.db
 ```
+
+- For more information on interacting with the database from the terminal (shell), refer to this [guide](https://datacarpentry.github.io/sql-socialsci/instructor/08-sqlite-command-line.html).
 
 ---
 
@@ -261,7 +277,7 @@ sqlite3 db/Market.db
 ## Attribution
 
 This project originated from a learning prompt during The Knowledge
-House fellowship.\
+House fellowship.
 All analysis logic, statistical testing, visualization design, and
 reporting narrative were independently rebuilt and expanded as part of
 my professional portfolio.
