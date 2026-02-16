@@ -69,6 +69,61 @@ statistical analysis.
 
 *<center>Distribution of suppliers by country. The United States, Germany, and France have the highest supplier presence, aligning with customer concentration patterns.</center>*
 
+## Detailed Analysis
+
+### 1. Demand Concentration & Supplier Alignment
+
+- The United States leads in both customer count (13) and total orders
+(29). Germany (11 customers) and France (11 customers) follow.
+
+- A statistically significant positive correlation exists between customer
+count and supplier count by country (r = 0.69, p = 0.002).
+
+- Brazil shows 9 customers but 0 suppliers, suggesting reliance on
+imports. Japan, Sweden, and Australia show supplier presence without
+customer concentration.
+
+---
+
+### 2. Revenue Drivers & Product Performance
+
+- Revenue is strongly volume-driven (r = 0.69, p \< 0.01). Increasing
+order frequency is likely a more impactful revenue lever than price
+changes alone.
+
+- Laughing Lumberjack Lager recorded 5 total units and €70 in revenue,
+indicating potential pricing or demand issues.
+
+---
+
+### 3. Engagement Patterns & Inactive Customers
+
+- The U.S. has both the highest order volume and highest inactive customer
+count (5). While a moderate correlation exists between total orders and
+inactive customers (r = 0.49), it is not statistically significant.
+
+- Brazil and Austria show high order activity with zero inactive
+customers.
+
+---
+
+### 4. Supplier Concentration & Coverage
+
+- Plutzer Lebensmittelgroßmärkte AG leads in distinct order coverage (42
+orders), followed closely by Pavlova Ltd.
+- High supplier concentration may introduce dependency risk.
+
+---
+
+## Strategic Recommendations
+
+1. Target inactive U.S. customers with retention initiatives.
+2. Evaluate Brazil's supplier gap to assess distribution
+    inefficiencies.
+3. Review underperforming SKUs such as Laughing Lumberjack Lager.
+4. Monitor supplier concentration risk.
+5. Focus growth efforts on increasing order frequency.
+
 ## Data Source & Schema
 
 **ERD file location:** `images/Northwind_E-R_Diagram.png`
@@ -133,22 +188,12 @@ This analysis addresses 8 core business questions:
 7. Countries with inactive customers
 8. Most popular suppliers by order participation
 
-Each section includes:
+**Each section includes**:
 
 - SQL query
 - Result preview
 - Visualization
 - Evidence-based interpretation
-
----
-
-## Strategic Recommendations
-
-1. Re-engage inactive U.S. customers via targeted campaigns.
-2. Investigate Brazil's supplier gap (high customers, zero suppliers).
-3. Evaluate underperforming SKUs for pricing or discontinuation review.
-4. Strengthen partnerships with high-performing suppliers.
-5. Explore price elasticity testing for low-volume products.
 
 ---
 
@@ -165,31 +210,38 @@ Each section includes:
     |  └─ number-of-suppliers-by-country.png
     ├─ notebooks/
     │  └─ Northwind_E-R_a_dhoc_report.ipynb
+    ├─ .gitignore
+    ├─ LICENSE.txt 
     ├─ README.md
+    ├─ requirements.txt 
 ---
 
 ## How to Run
 
-### Option A --- Jupyter Notebook
+> Python 3.10+ recommended.
+
+### Option A — Using venv (Recommended)
 
 ```bash
+python -m venv venv
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate     # Windows
+
 pip install -r requirements.txt
 jupyter lab
 ```
-
-Open:
-
-    adhoc_report.ipynb
 
 ### Option B --- VS Code SQLite Viewer
 
 Install the SQLite extension and open:
 
-    db/Market.db
+```bash
+db/Market.db
+```
 
 You may also test queries in the terminal using:
 
-``` bash
+```bash
 sqlite3 db/Market.db
 ```
 
@@ -218,9 +270,19 @@ my professional portfolio.
 
 ## Future Enhancements
 
-- Extend analysis to time-series revenue trends
-- Implement window functions for ranking
-- Deploy as an interactive dashboard (Streamlit)
+### Analytical Extensions
+
+- Extend analysis to time-series revenue trends.
+- Perform cohort-based customer retention analysis.
+- Implement segmentation clustering for customer behavior.
+
+### Technical Improvements
+
+- Refactor SQL queries into reusable helper functions.
+- Create a centralized query library for modular reuse.
+- Implement SQL window functions for ranking and advanced aggregation.
+- Parameterize notebook for scalability to additional datasets.
+- Deploy as an interactive dashboard (Streamlit).
 
 ## Contact
 
