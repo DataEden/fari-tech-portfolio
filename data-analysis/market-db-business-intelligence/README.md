@@ -69,11 +69,15 @@ statistical analysis.
 
 *<div align="center">Distribution of customers with zero orders across countries.</div>*
 
+---
+
 **Figure 2: Relationship Between Total Orders and Inactive Customers by Country (r = 0.49, p = 0.10)**
 
 ![Correlation Between Total Orders and Inactive Customers by Country](images/corr-bet-most-orders-and-no-orders-by-country.png)
 
 *<div align="center">Country-level scatter plot showing the relationship between total orders and customers with no orders. A moderate positive relationship is observed (r = 0.49), though not statistically significant (p > 0.05).</div>*
+
+---
 
 **Figure 3: Relationship Between Total Quantity Ordered and Total Revenue by Product (r = 0.69, p < 0.01)**
 
@@ -81,11 +85,15 @@ statistical analysis.
 
 *<div align="center">Product-level scatter plot showing a strong positive relationship between quantity ordered and total revenue. Revenue performance is primarily volume-driven.</div>*
 
+---
+
 **Figure 4: Supplier Distribution by Country**
 
 ![Suppliers by Country](images/number-of-suppliers-by-country.png)
 
 *<div align="center">Distribution of suppliers by country. The United States, Germany, and France have the highest supplier presence, aligning with customer concentration patterns.</div>*
+
+---
 
 ## Detailed Analysis
 
