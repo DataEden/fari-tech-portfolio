@@ -225,7 +225,7 @@ This analysis addresses 8 core business questions:
     ├─ db/
     │  └─ Market.db
     ├─ images/
-    │  └─ northwind_e-r_diagram.png
+    │  └─ northwind_er_diagram.png
     |  └─ countries-with-no-orders-by-number-of-customers.png
     |  └─ corr-bet-most-orders-and-no-orders-by-country.png
     |  └─ correlation-quantity-vs-revenue.png
