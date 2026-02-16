@@ -18,9 +18,9 @@
 
 ---
 
-![Last Commit](https://img.shields.io/github/last-commit/<username>/<repo-name>)
-![Repo Size](https://img.shields.io/github/repo-size/<username>/<repo-name>)
-![Top Language](https://img.shields.io/github/languages/top/<username>/<repo-name>)
+![Last Commit](https://img.shields.io/github/last-commit/dataeden/fari-tech-portfolio)
+![Repo Size](https://img.shields.io/github/repo-size/dataeden/fari-tech-portfolio)
+![Top Language](https://img.shields.io/github/languages/top/dataeden/fari-tech-portfolio)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -31,7 +31,7 @@
 This project is an ad-hoc business performance analysis using a
 relational SQLite database (`Market.db`, Northwind-style schema).
 
-![ERD Diagram](images/northwind_e-r_diagram.png)
+![ERD Diagram](/images/northwind_erd_diagram.png)
 
 **<div align="center">ERD Diagram of Market.db Schema</div>**
 
@@ -41,7 +41,7 @@ The objective was to simulate a real-world analyst workflow:
 validate outputs, and communicate findings using data visualizations and
 statistical analysis.
 
-> *All insights are supported by query outputs generated and found in the [project notebook](/data-analysis/market-db-business-intelligence/notebooks/adhoc_report.ipynb)*.
+> *All insights are supported by query outputs generated in the [Jupyter Notebook](/data-analysis/market-db-business-intelligence/notebooks/adhoc_report.ipynb)*.
 
 ---
 
