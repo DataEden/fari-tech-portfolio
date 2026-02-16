@@ -13,7 +13,7 @@ relational SQLite database (`Market.db`, Northwind-style schema).
 
 ![ERD Diagram](images/Northwind_E-R_Diagram.png)
 
-**<center>ERD Diagram of Market.db Schema</center>**
+**<div align="center">ERD Diagram of Market.db Schema</div>**
 
 The objective was to simulate a real-world analyst workflow:
 
