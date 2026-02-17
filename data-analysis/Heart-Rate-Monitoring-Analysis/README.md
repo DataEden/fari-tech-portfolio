@@ -1,4 +1,6 @@
-# Health Monitoring Data Processing
+# Wearable Health Signal Analysis
+
+## **Data Analyst Health-Tech Case Study | Time-Series Behavioral Inference**
 
 You are a software developer at a Taiwan-based wearable health-tech firm called Seng-Links. For your next project, you will assist in the creation of an application which will ingest 8 hours of user inputted heart-rate data and rate their quality of sleep. As the final project will take many months of hardware and software development, you are tasked with solely designing a simple application which developers can use to prototype to product. 
 
