@@ -1,4 +1,4 @@
-# Market.db Business Performance Report
+# Market.db Business Intelligence Report
 
 **Fari Lindo • DataInsideData™**
 
