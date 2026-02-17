@@ -6,8 +6,6 @@
 
 Business Intelligence Case Study | SQL + Python
 
----
-
 ## Tech Stack
 
 ![SQL](https://img.shields.io/badge/SQL-000000?logo=databricks&logoColor=white)
@@ -26,8 +24,6 @@ Business Intelligence Case Study | SQL + Python
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
----
-
 ## Overview
 
 This project is an ad-hoc business performance analysis using a
@@ -39,7 +35,7 @@ relational SQLite database (`Market.db`, Northwind-style schema).
 
 The objective was to simulate a real-world analyst workflow:
 
-- Interpret a normalized ERD, construct SQL queries to answer business questions,
+Interpret a normalized ERD, construct SQL queries to answer business questions,
 validate outputs, and communicate findings using data visualizations and
 statistical analysis.
 
