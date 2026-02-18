@@ -14,12 +14,10 @@ def filter_nondigits(data: list) -> list:
     if not data:
         return []
   
-    clean_list = []  # Initialize empty list to store permissible elements.
+    clean_list: list[int] = []  # Initialize empty list to store permissible elements.
     for val in data:  # Iterate over list of strings.
-        # remove newline characters from the string.
-        clean_element = val.strip()
-        # Check if element is a digit.        
-        if clean_element.isdigit():  
-            clean_list.append(int(val))  # Convert string to permissible element and append list.
-    return clean_list  # Return list of permissible elements.
+        clean_element = val.strip()  # remove newline characters from the string.
+        if clean_element.isdigit():  # Check if element is a digit.
+            clean_list.append(int(clean_element))  # Convert string to permissible elements and append list.
+    return clean_list  # Return list of int/permissible elements.
     
