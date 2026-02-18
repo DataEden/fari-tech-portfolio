@@ -1,31 +1,119 @@
+# Wearable Health Signal Analysis — Behavioral Inference Writeup
+
+This writeup summarizes findings from four heart-rate time-series files (`phase0–phase3`) sampled every 5 minutes. The objective is to clean noisy wearable telemetry, compute descriptive statistics, and infer likely behavioral states (sleep, exercise, awake activity) from signal characteristics.
+
+---
+
+## Summary of Phase Metrics (Evidence)
+
+Below are the descriptive statistics used to support behavioral inference:
+
+| Phase  | Mean (bpm) | Max (bpm) | Std Dev (bpm) | Interpretation Anchor |
+|-------:|-----------:|----------:|--------------:|------------------------|
+| Phase0 | 64.59      | 93        | 8.53          | Low mean + low max + stable variability |
+| Phase1 | 87.30      | 110       | 9.90          | Moderate mean + moderate max + moderate variability |
+| Phase2 | 85.18      | 117       | 13.38         | Elevated max + highest variability + sustained elevation |
+| Phase3 | 60.65      | 99        | 11.00         | Lowest mean but more volatility than Phase0 |
+
+> Notes: Mean and max help indicate intensity; standard deviation is used as a volatility proxy (higher variability often indicates movement, transitions, disturbance, or sensor noise).
+
+---
+
 ## Question 1
 
-Take a look at the file labeled `data/phase0.txt`. Why might we have missing values or values that state "NO DATA" in this dataset? While we are currently ignoring these values, what might be the risk of filtering these values out?
+### Why might we have missing values or values that state "NO DATA" in this dataset?
 
-Missing data can result from various factors. Person(s) may take off the sensor, I know that network issues can cause downtime as well (wifi, bluetooth, etc...). Devices can also experience system errors, which can affect data collection. 
+Wearable heart-rate datasets commonly contain missing values or corrupted entries due to real-world collection constraints. Likely causes include:
 
-The risk of filtering: Pontentially valuable information about device, skewed results, etc.., can be overlooked, which may lead to incorrect results/analysis. 
+- Sensor detachment or poor skin contact (temporary loss of signal)
+- Motion artifacts and excessive movement disrupting readings
+- Connectivity interruptions (Bluetooth/Wi-Fi packet loss)
+- Battery/power interruptions or device resets
+- Firmware buffering errors that write placeholders (e.g., `"NO DATA"`)
+
+### What is the risk of filtering these values out?
+
+Filtering out invalid readings is necessary for clean calculations, but it can introduce risk if done blindly:
+
+- **Bias risk:** Removing missing intervals can underrepresent periods of elevated heart rate or instability.
+- **Loss of diagnostic signal:** Missingness can reflect meaningful events (device removal, distress, sleep disruption).
+- **False stability:** Aggressively filtering can artificially lower variance and make the signal look “healthier” than reality.
+- **Operational blind spots:** If missingness is frequent, it may indicate data reliability issues relevant to product design.
+
+In a production health-tech pipeline, these values would typically be tracked with data-quality flags (rate of missingness, dropout windows, and anomaly reporting), not simply discarded.
+
+---
 
 ## Question 2
 
-During sleep, we expect maximum heart rate of a phase to be **lower** than the maximum heart rate of all other phases. Observe the visualizations and descriptive statistics that you've calculated. Using these findings, in which phase does sleep occur? Mention numerical details that back your findings.
+### In which phase does sleep occur? Provide numerical evidence.
 
-According to Phases 0 and 3 descriptive statistics, (64.59, 93, 8.53) and (60.65, 99, 11.0), we can see that there are comparatively low max values in relation to all other phases, which I believe, indicates sleep in both Phases. Phase3 however, has a higher spread which indicates a deeper more restful sleep in Phase0. In addition, Phase3 higher spread suggests taking a deeper look at what may be causing these higher spikes during sleep (example; medical, or other factor(s) that may be causing unsteady sleep). 
+Sleep is most consistent with **Phase0**, based on the expected sleep signature: lower maximum heart rate and relatively stable variability.
+
+- **Phase0:** mean = **64.59 bpm**, max = **93 bpm**, std dev = **8.53 bpm**
+  - Lower max compared to higher-activity phases, and comparatively stable variability suggests sustained low-intensity physiology.
+
+**Phase3** also shows sleep-like characteristics due to its low mean, but appears less stable:
+
+- **Phase3:** mean = **60.65 bpm**, max = **99 bpm**, std dev = **11.00 bpm**
+  - While the mean is the lowest across all phases, the **higher standard deviation** suggests more volatility, which could represent lighter sleep, transitions, disturbances, or sensor noise.
+
+**Conclusion:** Primary sleep phase = **Phase0** (most stable). Phase3 may represent a secondary sleep segment or a more disturbed period.
+
+---
 
 ## Question 3
 
-During exercise, we expect the maximum heart rate of a phase to be **higher** than the maximum heart rate of all other phases. Observe the visualizations and descriptive statistics that you've calculated. Using these findings, in which phase(s) does exercise occur? Mention numerical details that back your findings. 
+### In which phase does exercise occur? Provide numerical evidence.
 
-Phase2's descriptive statistics, (85.18, 117, 13.38), shows higher maximum heart rate compared to all other phases. Also the average and standard deviation shows elevated heart rate and high spread, respectively. The line graph clearly shows elevated heart rate between 100 and approximately 115 beats per minute (bpm) for nearly 30 mins. This may suggest cardio or an intense consistent exercise routine. We can also see a decrease in heart rate, which stays between about 70 to 100 bpm for the remaining 30 mins, which suggests an end to the exercise routine where the individual is at the standard wake time of 60-100 bpm (webmd.com). 
+Exercise is most consistent with **Phase2**, based on the expected exercise signature: higher maximum heart rate, increased variability, and sustained elevated periods.
+
+- **Phase2:** mean = **85.18 bpm**, max = **117 bpm**, std dev = **13.38 bpm**
+  - Highest max heart rate across all phases and the **largest variability**, indicating a strong intensity period with dynamic exertion/recovery cycles.
+
+Visual inspection further supports this: the time-series shows a sustained elevation (often ~100–115 bpm range) for an extended interval before tapering down, consistent with a workout segment followed by recovery.
+
+**Conclusion:** Exercise phase = **Phase2**.
+
+---
 
 ## Question 4
 
-During regular periods of awake activity, we expect the average heart rate of a phase to be relatively **lower** than the average heart rate of other phases, but we also expect standard deviation to be **higher**. In which phase do we notice this trend?
+### In which phase do we notice regular awake activity (moderate mean, moderate variability)?
 
-According to Phase1's descriptive statistics, (87.3, 110, 9.9), we can see that the Max heart rate is 110 with a standard deviation of 9.9. Also according to the line chart, we can see even clearer that the maximum heart rate hovers around about 60 to slighlty higher than 100 bpm. This suggests "wake time" which is usually "between 60-100 bpm" (sleepfoundation.org). This suggests normal awake time activities, such as lifting, walking, etc... We can observe the slightly higher spread of 9.9 as an indicator of such activities.  
+Regular awake activity (non-exercise) typically sits between sleep and exercise:
 
-Sources:
-- sleepfoundation.org: Normal resting rate is typically between 60 and 100 bpm. A normal heart rate during sleep drops to between 40 and 50 bpm.
-- Early detection of Heart rate anomallies can lead to beter overall heath and sleep quality.
-- Webmd.com: Typical heart rate is normally between 60 and 100 bpm. 
+- higher mean than sleep,
+- lower max than exercise,
+- moderate variability from day-to-day movement.
 
+This pattern best matches **Phase1**:
+
+- **Phase1:** mean = **87.30 bpm**, max = **110 bpm**, std dev = **9.90 bpm**
+  - Higher baseline than sleep, but lower max and lower volatility than the exercise phase.
+
+**Conclusion:** Awake activity phase = **Phase1**.
+
+---
+
+## Limitations
+
+- Heart rate alone cannot perfectly classify behavioral states (no accelerometer, no respiration, no HRV features).
+- Some spikes/variability may be due to sensor artifacts rather than physiology.
+- Filtering corrupted entries is necessary, but missingness patterns should ideally be analyzed as a signal-quality metric.
+
+---
+
+## Future Enhancements
+
+- Rolling-window HRV features (RMSSD proxy if R–R intervals available; otherwise variability windows).
+- Anomaly detection (spike detection, dropout windows, artifact flags).
+- Rule-based classifier → logistic regression / tree model for phase classification.
+- Sleep scoring v1 using duration, stability (variance), and spike count.
+
+---
+
+## References (General Ranges)
+
+Common adult resting heart rate often falls between **~60–100 bpm**, and sleep commonly trends lower than daytime activity.
+(These ranges vary widely by individual fitness, age, medication, and health conditions.)
