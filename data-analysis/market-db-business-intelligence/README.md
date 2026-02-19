@@ -1,5 +1,7 @@
 # Market.db Business Intelligence Report
 
+> Part of the DataInsideData™ technical portfolio monorepo.
+
 **Fari Lindo • DataInsideData™**
 
 **Role:** Data Analyst (Portfolio Project)
@@ -239,6 +241,13 @@ This analysis addresses 8 core business questions:
 ## How to Run
 
 > Python 3.10+ recommended.
+
+### Clone the Portfolio Repository
+
+```bash
+git clone https://github.com/dataeden/fari-tech-portfolio.git
+cd fari-tech-portfolio/data-analysis/market-db-business-intelligence
+```
 
 ### Option A — Using venv (Recommended)
 
