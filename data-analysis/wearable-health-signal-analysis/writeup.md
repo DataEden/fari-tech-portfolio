@@ -115,5 +115,5 @@ This pattern best matches **Phase1**:
 
 ## References (General Ranges)
 
-Common adult resting heart rate often falls between **~60–100 bpm**, and sleep commonly trends lower than daytime activity.
-(These ranges vary widely by individual fitness, age, medication, and health conditions.)
+- [The Sleep Foundation sleep statistics](https://www.sleepfoundation.org/how-sleep-works/sleep-facts-statistics): Common adult resting heart rate often falls between **~60–100 bpm**, and normal heart rate during sleep commonly trends lower between 40 to 50 bpm.
+- [What is heart rate variability?](https://www.webmd.com/heart/what-is-heart-rate-variability): These ranges vary widely by individual fitness, age, medication, and health conditions.
