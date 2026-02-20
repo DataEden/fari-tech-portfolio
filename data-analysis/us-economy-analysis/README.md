@@ -273,7 +273,11 @@ for long-term financial stability.
     us-economy-analysis/
     │
     ├── assets/
-    │   └── cohort_a_econ_banner.png
+    │   ├── econ_health_banner.png
+    |   ├── Income-vs-Consumption-Efficiency-Behavioral-View.png
+    |   ├── Nominal-vs-Real-Disposable-Income.png
+    |   ├── Real-Personal-Consumption-During-Recessions.png
+    |   └── Regional-Cost-Structure-Comparison.png
     │
     ├── data/
     │   ├── Cost_of_Living_and_Income_Extended.csv
@@ -287,6 +291,7 @@ for long-term financial stability.
     │   └── Sherla_eda1.ipynb
     │
     ├── .gitignore
+    ├── LICENSE
     ├── README.md
     └── requirements.txt
 
