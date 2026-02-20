@@ -59,6 +59,11 @@ selected global regions.
 - Real Personal Consumption Expenditures show consistent **December seasonal spikes (\~3--5% above annual monthly average)**.
 - Majority income concentration falls within the **\$40K--\$50K disposable income range**, indicating mid-tier clustering.
 
+**Panel Structure**:
+
+- Global dataset: 21 countries × 24 years (500 country-year observations)
+- U.S. macro dataset: Monthly time-series (2007–2025, 216+ observations)
+
  > Volatility between nominal and real income post-2021 represents the strongest macro stress signal observed in this dataset.
 
 > Overall, the U.S. economy demonstrates structural resilience, but inflation-adjusted income stagnation presents emerging liquidity constraints.
@@ -80,8 +85,6 @@ selected global regions.
 | Seasonal spending spike (Dec vs avg month) | ~+3–5% | Holiday-driven consumption peak recurs consistently |
 | U.S. macro time series window | Jan 2007–2025 | Monthly series used for liquidity + spending trend analysis |
 | Global COL dataset coverage | **21 countries**, **2000–2023 (24-year span)** | 500 structured country-year observations
-
-| U.S. macro time series window | Jan 2007 – 2025 |
 
 ---
 
@@ -349,12 +352,11 @@ Open and run notebooks in:
 
 ---
 
-## Maintainers
+## Attribution
 
-Developed as part of a collaborative TKH TEPP economic analysis
-initiative.
+This project originated from a collaborative economic analysis initiative during The Knowledge House (TKH) Data Science fellowship.
 
-Lead analytical direction and macro-liquidity modeling by **Fari Lindo**.
+All macro-liquidity modeling, statistical analysis, visualization architecture, and reporting narrative were independently refined, extended, and reconstructed as part of my professional DataInsideData™ portfolio.
 
 ---
 
