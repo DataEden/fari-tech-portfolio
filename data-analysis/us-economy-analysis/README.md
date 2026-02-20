@@ -1,46 +1,157 @@
+
 <p align="center">
-  <img src="assets/cohort_a_econ_banner.png" alt="Cohort-A Econ Banner" width="80%">
+  <img src="../us-economy-analysis/assets/econ_health_banner.png" alt="Project Banner" width="100%">
 </p>
 
 ---
-# 📦 National & International Economic Insight & EDA Project  
-## Cohort-A Econ | End-of-Phase Team Project  
-**Contributors:** James Ceus, Jessenia Diaz, Fari Lindo, Bakari Sibert, Sherla Zhagnay
 
-   **Last Updated:** 2025-25-2025  
+# US & Global Economic Health Analysis
+
+> Part of the DataInsideData™ technical research portfolio.  
+> A data-driven examination of income, cost-of-living, and liquidity trends across the United States and global regions.
+
+#### Fari Lindo • Lead Analyst  
+
+DataInsideData™ Portfolio Project
+
+**Collaborators:** James Ceus, Jessenia Diaz, Bakari Sibert, Sherla
+Zhagnay
 
 ---
 
-## 📚 Introduction
-Our team has just secured an international contract, giving our consultants the exciting opportunity to relocate overseas. For many, this may be their first time living abroad—and while the potential tax benefits are enticing, there’s still a lot of uncertainty around what relocation would actually look like in practice.
+## Tech Stack
 
-Thankfully, through our Innovation Fellowship, consultants have already gotten a taste of work-life dynamics in various global locations. Whether based in South Korea, Brazil, or Vancouver, they’ve provided localized insights and strategic recommendations to clients, gaining first-hand knowledge of different economic landscapes.
+![EDA](https://img.shields.io/badge/EDA-000000)
+![Statistical Analysis](https://img.shields.io/badge/Statistical%20Analysis-000000)
+![Time Series](https://img.shields.io/badge/Time--Series-000000)
+![Correlation](https://img.shields.io/badge/Pearson%20Correlation-000000)
 
-Now, as we enter Phase 2 of the fellowship, many consultants are considering where they might want to move—regardless of whether they stay on a data analytics track. To support these decisions, our team is diving into key analytical questions that explore the relationship between income, cost of living, and economic health across regions.
+![Python](https://img.shields.io/badge/Python-000000?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-000000?logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-000000?logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-000000?logo=scipy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C)
+![Seaborn](https://img.shields.io/badge/Seaborn-5B8FA8)
+![Plotly](https://img.shields.io/badge/Plotly-000000?logo=plotly&logoColor=white)
 
-This project aims to explore the current and historical economic conditions of the United States and the Broader World through exploratory data analysis (EDA), Statistical Methods, and visualizations from real data.
+---
 
-We are investigating economic **disparities**, **liquidity trends**, **spending behavior**, and **cost of living pressures** on the American population and the Borader World using two main datasets:
+![Last Commit](https://img.shields.io/github/last-commit/dataeden/fari-tech-portfolio) ![Repo Size](https://img.shields.io/github/repo-size/dataeden/fari-tech-portfolio)
 
-- ##### **Dataset 1:** `Cost_of_Living_and_Income_Extended.csv`
-- ##### **Dataset 2:** `US_macro_micro_index.csv`
+![Top Language](https://img.shields.io/github/languages/top/dataeden/fari-tech-portfolio)
 
-## Dataset Dictionary
-### Cost_of_Living_and_Income_Extended.csv
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-- **`Country`:** Name of the country.
-- **`Year`:** Year of the data recored.                     
-- **`Average_Monthly_Income`:** Average monthly income in local currency or USD (check source).
-- **`Cost_of_Living`:** Composite cost of living index or total monthly average expenses.
-- **`Housing_Cost_Percentage`:** Percentage of income spent on housing.
-- **`Tax_Rate`:** Average effective income tax rate (as a percentage).
-- **`Savings_Percentage`:** Estimated percentage of income that goes into savings.
-- **`Healthcare_Cost_Percentage`:** Percentage of income spent on healthcare.
-- **`Education_Cost_Percentage`:** Percentage of income spent on education.
-- **`Transportation_Cost_Percentage`:** Percentage of income spent of transportation.                         
-- **`Region`:**  Geographic region (e.g., North America, South America, Europe, etc.).                                             
+---
 
-### US_macro_micro_index.csv
+## Executive Summary
+
+This project evaluates economic resilience, income growth, purchasing
+power, and cost-of-living pressures across the United States and
+selected global regions.
+
+### Key Quantitative Highlights
+
+- U.S. **Total Personal Income increased \~110%** from \~\$10T (2000) to \~\$21T+ (2023).
+- Disposable Personal Income rose proportionally, with a **pandemic-era peak in 2020--2021**.
+- Real Disposable Personal Income peaked in early 2021 and declined \~9 percentage points through 2025.
+- Correlation between income and housing burden in North America measured at **r ≈ -0.40**.
+- Real Personal Consumption Expenditures show consistent **December seasonal spikes (\~3--5% above annual monthly average)**.
+- Majority income concentration falls within the **\$40K--\$50K disposable income range**, indicating mid-tier clustering.
+
+ > Volatility between nominal and real income post-2021 represents the strongest macro stress signal observed in this dataset.
+
+> Overall, the U.S. economy demonstrates structural resilience, but inflation-adjusted income stagnation presents emerging liquidity constraints.
+
+**Primary Datasets:**
+
+- `Cost_of_Living_and_Income_Extended.csv`
+- `US_Macro_Micro_Index.csv`
+
+---
+
+## 📌 KPI Snapshot
+
+| KPI | Value | What it means |
+|---|---:|---|
+| Total Personal Income growth (2000 → 2023) | ~110% | Nominal income roughly doubled over two decades |
+| RDPI change (2021 peak → 2025) | ~-9 pp | Inflation-adjusted purchasing power flattened/declined post-stimulus |
+| Income ↔ Housing burden (North America) | r ≈ -0.40 | Higher income associated with lower housing share of income |
+| Seasonal spending spike (Dec vs avg month) | ~+3–5% | Holiday-driven consumption peak recurs consistently |
+| U.S. macro time series window | Jan 2007–2025 | Monthly series used for liquidity + spending trend analysis |
+| Global COL dataset coverage | **21 countries**, **2000–2023 (24-year span)** | 500 structured country-year observations
+
+| U.S. macro time series window | Jan 2007 – 2025 |
+
+---
+
+## 📊 Visual Highlights
+
+**Figure 1 —  U.S. Disposable Income (Nominal vs Real)**
+
+![Nominal vs Real Disposable Income](/data-analysis/us-economy-analysis/assets/Nominal-vs-Real-Disposable-Income.png)
+
+**<div align="center">Nominal income growth masks inflation-adjusted stagnation, highlighting post-pandemic purchasing power compression.</div>**
+
+---
+
+**Figure 2 — Real Personal Consumption During Recessions**
+
+![Real Personal Consumption During Recessions](/data-analysis/us-economy-analysis/assets/Real-Personal-Consumption-During-Recessions.png)
+
+**<div align="center"> Recession overlays reveal asymmetric recovery dynamics: prolonged contraction post-2008 versus rapid stimulus-accelerated rebound in 2020.</div>**
+
+---
+
+**Figure 3 — Income vs Consumption Efficiency (Behavioral View)**
+
+![Income vs Consumption Efficiency](/data-analysis/us-economy-analysis/assets/Income-vs-Consumption-Efficiency-Behavioral-View.png)
+**<div align="center"> Income and consumption maintain strong structural correlation, with temporary efficiency distortions during crisis periods.</div>**
+
+---
+
+**Figure 4 — Cost of Living vs Income by Region**
+
+![Regional Cost of Living](/data-analysis/us-economy-analysis/assets/Regional-Cost-Structure-Comparison.png)
+**<div align="center"> Housing remains the dominant global expenditure component, with tax and savings variability shaping disposable income capacity.</div>**
+
+---
+
+## Cost_of_Living_and_Income_Extended.csv
+
+📘 **Data Dictionary**
+
+- `Country`: Name of the country
+- `Year`: Year of record
+- `Average_Monthly_Income`: Average monthly income
+- `Cost_of_Living`: Composite cost-of-living index
+- `Housing_Cost_Percentage`: % of income spent on housing
+- `Tax_Rate`: Effective income tax rate
+- `Savings_Percentage`: % of income saved
+- `Healthcare_Cost_Percentage`: % of income spent on healthcare
+- `Education_Cost_Percentage`: % of income spent on education
+- `Transportation_Cost_Percentage`: % of income spent on transportation
+- `Region`: Geographic region
+
+## US_Macro_Micro_Index.csv
+
+ 📘 **Data Dictionary**
+
+| Column Name                                   | Description                                                                 |
+|-----------------------------------------------|-----------------------------------------------------------------------------|
+| `DATE`                                        | Monthly timestamp (2007–2025)                                               |
+| `YEAR`                                        | Calendar year extracted from DATE                                           |
+| `MONTH`                                       | Calendar month as a number (1–12)                                           |
+| `MONTH_NAME`                                  | Calendar month as text (e.g., Jan, Feb)                                     |
+| `QUARTER`                                     | Fiscal quarter for each date (e.g., Q1, Q2)                                 |
+| `QUARTER_LABEL`                               | Label combining quarter and year (e.g., Q1 - 2007)                          |
+| `Disposable_Personal_Income_Nominal`          | Total post-tax income (billions, current dollars, not inflation-adjusted)  |
+| `Disposable_Personal_Income_Per_Capita`       | Post-tax income per person (chained 2017 dollars)                           |
+| `Real_Personal_Consumption_Expenditures`      | Inflation-adjusted consumer spending (billions, chained 2017 dollars)       |
+| `Total_Personal_Income`                       | Total pre-tax personal income (billions of dollars)                         |
+| `RPCE_rolling`                                | 6-month rolling average of real consumption (created in notebook)          |
+| `Spending_Efficiency`                         | Ratio of real spending to income (RPCE ÷ DPI)                              |
+
 - **`nominal_disposable_personal_income_DSPI.csv`:** Total personal income after taxes (not adjusted for inflation). Useful for examining general liquidity available to the population.
   - **Units**: Billions of Dollars
 - **`real_disposable_personal_income_percapita_A229RX0.csv`:** Inflation-adjusted income per person. Useful for measuring real purchasing power and income disparity analysis.
@@ -50,13 +161,16 @@ We are investigating economic **disparities**, **liquidity trends**, **spending 
 - **`total_personal_income_pi.csv`:** Total income received before taxes. Useful for examining economic growth, employment, and estimating tax burden when compared to DSPI.
   - **Units**: Billions of Dollars
 
-## 🔗 External Tools & Resources
+---
+
+## 🔗 Tools & Resources
 
 **Kaggle Dataset:**
 
 - **Source:** [Cost of Living and Income (Extended)](https://www.kaggle.com/datasets/heidarmirhajisadati/regional-cost-of-living-analysis)
 
 **Federal Reserve Economy Database:**
+
 - [FRED - DSPI](https://fred.stlouisfed.org/series/DSPI)
   - **Series ID**: DSPI
 - **Source**: [FRED - A229RX0](https://fred.stlouisfed.org/series/A229RX0)
@@ -64,137 +178,193 @@ We are investigating economic **disparities**, **liquidity trends**, **spending 
 - **Source**: [FRED - PCEC96](https://fred.stlouisfed.org/series/PCEC96)
   - **Series ID**: PCEC96
 - **Source**: [FRED - PI](https://fred.stlouisfed.org/series/PI)
-  -  **Series ID**: PI
+  - **Series ID**: PI
 
-## 💡 Notes
+- `DSPI`: Nominal Disposable Personal Income (Billions USD)
+- `A229RX0`: Real Disposable Personal Income per Capita (Chained 2017 Dollars)
+- `PCEC96`: Real Personal Consumption Expenditures (Billions, Chained 2017 Dollars)
+- `PI`: Total Personal Income (Billions USD)
 
-- 💵 Note: All monetary values are expressed in either inflation-adjusted dollars (real) or nominal dollars, as clearly indicated.
-- 📈 Team members are encouraged to contribute visualizations and summary writeups alongside their EDA.
----
+## Contributor Analytical Focus Areas
 
-## 🔍 Analytical Questions & Team Responses
+### Housing Affordability & Regional Cost Correlation (James Ceus)
 
-### 🧠 **James Ceus**
-**Question:**  
-*How does income correlate with specific components of the cost of living (e.g., housing affordability, food prices) across different regions?*
+- Identified moderate negative correlation between income and housing costs in North America (r ≈ -0.4).
+- Proposed regression modeling for further quantification.
 
-**Response:**  
-<!-- Write your notes, analysis, or findings here -->
-- Used heatmap to analyze correlation between income & housing, food, transportation
-- Found strongest correlation with housing costs in North America (r = -0.4)
-- Next step: Run linear regression to quantify income impact on cost drivers
+### Spending Distribution Analysis (Bakari Sibert)
 
----
+- Explored distributional differences between income and cost-of-living.
+- Observed disproportionate housing burden among lower-income households.
 
-### 🧠 **Bakari Sibert**
-**Question:**  
-*With a focus on the United States, how does the distribution of income compare to the distribution of cost of living?*
+### Liquidity & Macro Indicators (Fari Lindo)
 
-**Response:**  
-<!-- Add EDA insights or visualizations -->
-- Theres not a strong correlation between to total income earned and cost of living because one is a micro economic factor and one is a macro with potentially different inputs.
-- Noticed that lower-income brackets spend disproportionately more on housing
-- Cost of living varies widely by region—Midwest vs West Coast especially stark
+- Led analysis of DSPI, RDPI, PCEC, and PI trends.
+- Identified widening nominal vs real income gap post-2021.
 
----
+### Expenditure Trend Adaptation (Jessenia Diaz)
 
-### 🧠 **Fari Lindo**
-**Question:**  
-*What’s the overall economic health of Americans—how much liquidity do Americans have?*
+- Demonstrated V-shaped consumer spending recovery post-2008 and post-COVID.
 
-**📝 Response:**  
-- The U.S. has seen steady personal income growth, doubling over the last two decades.
-- Despite temporary income spikes during the 2020–2021 pandemic period, long-term trends show consistent wage increases and economic recovery post-COVID. 
-- However, real purchasing power has flattened recently due to inflation, even as nominal income rises.
-- The seasonal pattern metrics: 
-  - income typically peaks in March and December (bonuses, refunds) and dips in summer months (July–August).
-- Most individuals fall within the $40K–$50K disposable income range, highlighting income concentration in the mid-tier.
-- The Wealth Gap doesn't seem to be narrowing--majority of Americans are earning between $40k-$50k range and a small amount of individuals earn ~$60k. 
+### Global Comparative Cost Analysis (Sherla Zhagnay)
 
-#### **💵 Income Trends**
-  - Total Personal Income (current dollars) doubled from ~$10 trillion in 2000 to over $21 trillion by 2023.
-  - Disposable Personal Income (DPI) also grew proportionally, peaking during the pandemic due to government stimulus.
-
-#### **💹 Purchasing Power & Inflation**
-  - Real Disposable Personal Income (RDPI) peaked around early 2021, then began flattening or slightly declining post-stimulus as previously mentioned--from ∼78% in 2021 trending downwards to ∼69% in 2025.
-  - The gap between DPI and RDPI widened over time—indicating inflation seems to be eroding purchasing power.
-
-#### **📊 Liquidity Metrics**
-  - Disposable Income per Capita:
-    - Majority of Americans are concentrated in the $40,000–$50,000 range.
-    - Only a small segment earn $60,000+, suggesting wealth concentration.
-  
-#### **💸 Spending Behavior**
-  - Real Personal Consumption Expenditures have seasonal spikes:
-  - December peaks: consistently the highest, likely due to holiday spending.
-  - July/August dips: correlated with mid-year lull.
-  - Overall, spending continues, but growth rate has slowed in real terms, especially after 2021.
+- Compared U.S. and European healthcare spending.
+- Identified inflation influence on savings behavior.
 
 ---
 
-### 🧠 **Jessenia Diaz**
-**Question:**  
-*In what ways have Americans’ spending patterns changed over time, and how do trends in expenditures reflect those shifts?*
+## U.S. Liquidity & Purchasing Power Deep Dive (Lead Analysis)
 
-**Response:** 
-- Between 2007 and 2025, Americans’ spending patterns have reflected a resilient and adaptive consumer economy. Despite major economic disruptions such as the 2008 financial crisis and the COVID-19 pandemic, real personal consumption expenditures (RPCE) have shown a consistent long-term upward trend. Short-term shocks did lead to temporary dips in spending, but each was followed by a swift, V-shaped recovery — highlighting the adaptability of American households.
+### Income Trend Acceleration & Inflection Points
 
-- Spending remained strongly correlated with income over time, though certain years — especially during periods of government stimulus — revealed temporary surges in consumption efficiency, where people spent more relative to their disposable income. Seasonal patterns were also evident, with Q4 typically showing higher expenditures (likely holiday-driven), while Q1 often reflected post-holiday pullbacks.
+- Post-2008 recovery showed steady nominal growth (~4–6% annualized).
+- 2020–2021 stimulus created abnormal income surge (~15% YoY spike).
+- Post-2021 normalization period shows flattening in inflation-adjusted growth.
 
-- Overall, the trends in expenditures underscore a stable and responsive consumer landscape. Americans tend to return to consistent spending behaviors after crises, maintaining long-term momentum. 
-- For prospective migrants, job seekers, or investors, this suggests a dependable economic environment — where consumer confidence rebounds quickly, and seasonal trends provide insight into planning and opportunity.
+### Purchasing Power & Inflation
+
+- Real Disposable Personal Income peaked in early 2021 before flattening.
+- The widening gap between nominal and real income signals inflationary pressure.
+
+### Liquidity Metrics
+
+- Majority of Americans cluster in the \$40K--\$50K disposable income range.
+- Limited upward mobility into higher income brackets indicates concentration. 
+
+### Spending Behavior
+
+- Real consumption expenditures show strong seasonal December peaks.
+- July/August dips suggest mid-year liquidity compression.
+- Post-crisis recoveries consistently show V-shaped rebounds.
 
 ---
 
-### 🧠 **Sherla Zhagnay**
-**Question:**  
-*Does the relationship between income and cost of living across global regions (e.g., North America, South America, Europe) influence Americans’ spending habits, financial liquidity, and overall economic well-being over time?*
+## Strategic Recommendations
 
-**Response:**  
-- Compared U.S. with similar economies in Europe
-- Americans tend to spend more out-of-pocket on healthcare than Europeans
-- Global inflation trends seem to impact savings behavior
+### For Movers & Job Seekers
+
+- Plan relocations during Q3--Q4 for stronger economic activity.
+- Evaluate inflation-adjusted salary rather than nominal compensation.
+- Consider regional housing and healthcare burdens carefully.
+
+### For Investors & Analysts
+
+- Monitor RDPI vs DSPI divergence as an inflation stress indicator.
+- Watch seasonal liquidity cycles when forecasting consumption trends.
 
 ---
 
-## General Consensus:
-**We recommend:** 
--  Whether you're planning to move to the United States or any other part of the world, understanding spending patterns, income trends, and cost-of-living dynamics is key to making confident, informed decisions. Based on U.S. economic data from 2007 to 2025, here's what the numbers—and the patterns—can tell us:
+## General Economic Insight
 
-**Key Insights from U.S. Data (2007–2025):**
-- Resilient Spending Patterns: Americans consistently return to strong spending habits after crises. Major disruptions like the 2008 recession and COVID-19 caused temporary dips, but were followed by rapid V-shaped recoveries. This reflects a consumer culture that adapts and rebounds.
-- Income Growth vs. Purchasing Power: Personal income has steadily increased over two decades and even doubled in some segments. However, real purchasing power has flattened recently due to inflation. Nominal wage growth doesn't always equal stronger financial health.
-- Seasonal Trends Matter: Income and spending peak in March and December (likely due to bonuses and refunds) and tend to dip in summer months. This matters when planning moves, job starts, or major financial commitments.
-- Cost of Living ≠ Income: There is no one-size-fits-all relationship between income and expenses. Regional disparities are stark:
-  - The West Coast often has higher costs than the Midwest.
-  - Lower-income households spend disproportionately more on essentials like housing and food.
-  - Healthcare costs are higher out-of-pocket in the U.S. than in many European countries.
+The U.S. economy demonstrates structural resilience with strong recovery
+mechanisms. However, real income stagnation and cost pressures highlight
+emerging liquidity constraints.
 
-**Smart Strategies for Movers & Job Seekers:**
-- Plan Around Seasonality:
-- Q3–Q4 is a strong window to move or job hunt — better economic activity, fewer income dips.
-- Prepare a financial buffer for summer months and unexpected delays.
-- Prioritize Real Income:
-- Don't evaluate jobs on salary alone — consider inflation-adjusted earnings, benefits, and regional costs.
-- Look into local housing, healthcare, food, and transport prices to understand true affordability.
-- Target Growth Industries:
-  - U.S. sectors like tech, green energy, healthcare, and logistics are expanding and resilient.
-  - These industries often align with long-term income growth and economic stability.
-- Negotiate Like a Pro:
-  - Use data to your advantage — leverage cost-of-living indices and seasonal income patterns in salary negotiations.
-  - Aim for compensation packages that track inflation and future expenses, not just headline salary numbers.
-- Think Globally, Plan Locally:
-- Whether you’re heading to the U.S., Canada, Europe, or elsewhere, apply the same principles:
-  - Know your target country’s economic cycles, consumer behavior, and regional differences.
-  - Seek out correlation insights — e.g., how income relates to local housing, transportation, and savings.
-  
-**Final Thought:**
-- Economic resilience, seasonal behavior, and smart planning separate success from struggle. 
-- The U.S.—like many developed economies—offers real opportunity, but it favors those who combine insight with preparation.
-- With a clear view of the data, you can confidently build a financially sound, fulfilling future wherever your journey leads.
+Economic preparedness and data-informed decision-making remain essential
+for long-term financial stability.
 
-## 👥 Maintainers
+---
 
-This project is part of a collaborative effort by **TKH for TEPP Group Project**. Developed by James Ceus, Jessenia Diaz, Fari Lindo, Bakari Sibert, and Sherla Zhagnay.
+## Directory Structure
 
-For questions, please contact: `sjzhagnay3@gmail.com` or open an issue in the repo.
+    us-economy-analysis/
+    │
+    ├── assets/
+    │   └── cohort_a_econ_banner.png
+    │
+    ├── data/
+    │   ├── Cost_of_Living_and_Income_Extended.csv
+    │   └── US_Macro_Micro_Index.csv
+    │
+    ├── notebooks/
+    │   ├── Fari_eda.ipynb
+    │   ├── James_eda.ipynb
+    │   ├── Jessenia_eda.ipynb
+    │   ├── Bakari_eda.ipynb
+    │   └── Sherla_eda1.ipynb
+    │
+    ├── .gitignore
+    ├── README.md
+    └── requirements.txt
+
+---
+
+## Methods & Libraries
+
+This analysis applies:
+
+- Pearson correlation (`scipy.stats.pearsonr`)
+- Time-series trend evaluation
+- Distribution analysis
+- Regional segmentation analysis
+- Inflation-adjusted income comparison
+- Seasonal decomposition observation
+
+Libraries Used:
+
+- `pandas`
+- `numpy`
+- `scipy`
+- `matplotlib`
+- `seaborn`
+- `plotly.express`
+- `math`
+
+---
+
+## How to Run
+
+> Python 3.10+ recommended.
+
+Clone the Portfolio Repository
+
+```bash
+git clone https://github.com/dataeden/fari-tech-portfolio.git
+cd fari-tech-portfolio/us-economy-analysis
+```
+
+Create a Virtual Environment (Recommended)
+
+```bash
+python -m venv venv
+source venv/bin/activate      # Mac/Linux
+venv\Scripts\activate         # Windows
+```
+
+Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Notebooks
+
+Open and run notebooks in:
+
+- `notebooks/Bakari_eda.ipynb`
+- `notebooks/Fari_eda.ipynb`
+- `notebooks/James_eda.ipynb`
+- `notebooks/Jessenia_eda.ipynb`
+- `notebooks/Sherla_eda1.ipynb`
+
+---
+
+## Maintainers
+
+Developed as part of a collaborative TKH TEPP economic analysis
+initiative.
+
+Lead analytical direction and macro-liquidity modeling by **Fari Lindo**.
+
+---
+
+## Contact
+
+#### Fari Lindo • DataInsideData™
+
+- [GitHub](https://github.com/dataeden)
+- [Portfolio](https://datainsidedata.com)
+- [LinkedIn](https://www.linkedin.com/in/fari-lindo/)  
+- [Email](mailto:contact@datainsidedata.com)
+
+*Tech Hands, a Science Mind, and a Heart for Community™*
