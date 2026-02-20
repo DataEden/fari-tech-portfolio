@@ -7,7 +7,7 @@
 
 # US & Global Economic Health Analysis
 
-> Part of the DataInsideData™ technical research portfolio.  
+> Part of the DataInsideData™ technical portfolio monorepo.  
 > A data-driven examination of income, cost-of-living, and liquidity trends across the United States and global regions.
 
 #### Fari Lindo • Lead Analyst  
