@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/assets/FuturisticBrand.png" alt="Data Insode Data Brand banner" width="50%">
+  <img src="assets/FuturisticBrand.png" alt="Data Inside Data Brand banner" width="50%">
 </div>
 
 ---
