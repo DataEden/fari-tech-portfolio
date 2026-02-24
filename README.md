@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="assets/FuturisticBrand.png" alt="Data Insode Data Brand banner" width="50%">
+</div>
+
+---
+
 # Fari (Far-Eye) Lindo - Tech Portfolio
 
 Welcome to my technical portfolio. This repository is a showcase of my hands-on technical experience, certifications, and aligned project work for roles in audit analytics, data analytics, machine learning, and cloud infrastructure. I created this to help hiring managers, recruiters, and collaborators gain insight into both my capabilities and commitment to excellence.
@@ -142,20 +148,24 @@ All verified certifications and badges:
 ---
 
 ## 🔗 Contact
-**GitHub:** [github.com/DataEden](https://github.com/DataEden)  
-**LinkedIn:** [linkedin.com/in/fari-lindo](https://linkedin.com/in/fari-lindo)  
-**Portfolio Site:** [DataEden.org](https://dataeden.org)
+
+#### Fari Lindo • DataInsideData™
+
+- [GitHub](https://github.com/dataeden)
+- [Portfolio](https://datainsidedata.com)
+- [LinkedIn](https://www.linkedin.com/in/fari-lindo/)  
+- [Email](mailto:contact@datainsidedata.com)
 
 ---
 
 ## 🚀 About Me
-I'm Fari, a U.S. citizen of African and Caribbean descent, currently a Data Science Fellow at The Knowledge House 2025 and an active participant in AI intensives with Google/Kaggle. I'm passionate about using data, automation, and AI/ML to empower people, businesses, and nonprofits.
 
-My motto:
+I'm Fari, I'm passionate about using data, automation, and AI/ML to empower people, businesses, nonprofits, and communities.
+
+## My tagline
+
 **Tech hands, a science mind, and a heart for community™**
 
 ---
 
 > Visual identity and portfolio by Fari Lindo — reflecting my values, journey, and lifelong commitment to growth in tech.
-
-
