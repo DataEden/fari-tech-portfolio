@@ -1,104 +1,475 @@
-# Weather Data Analysis
+# ☕ Structural vs Climatic Drivers of Coffee Production  
 
-You are a data engineer at a Brazil-based weather prediction startup called Curu-Sight. The goal of this startup is to analyze weather trends in Brazil and predict the output of non-durable consumer goods at harvest time.
+## Minas Gerais, Brazil (2002–2023)
 
-One major threat (barring tariffs) to Brazil's biggest export, coffee, is leaf rust. This fungus thrives in humid environments and causes plants to wither. Your company recently won a contract with the local government of Minas Gerais to analyze how humidity (and auxiliary measures) determine the yearly output of coffee.
+> Part of the DataInsideData™ technical portfolio monorepo.  
+> Agricultural Data Analysis & Climatic Impact Modeling.
 
-You will analyze a dataset that contains averages calculated based on rainfall, temperature, humidity, and wind metrics collected during the coffee growing season. You will also analyze a dataset that contains Minas Gerais' crop output. You will then combine these two datasets to explore how the weather influences coffee growth.
+#### Fari Lindo • Analyst
 
-## Data Dictionary
+---
 
-Column descriptions for each dataset is listed below:
+## Tech Stack
 
-**weather_data**
-This dataset describes yearly weather outcomes for the coffee-growing months of Minas Gerais. Only weather data from January through May is considered.
+![EDA](https://img.shields.io/badge/EDA-000000)
+![Statistical Analysis](https://img.shields.io/badge/Statistical%20Analysis-000000)
+![Normality Test](https://img.shields.io/badge/Shapiro--Wilk%20Test-000000)
+![Time Series](https://img.shields.io/badge/Time--Series-000000)
+![Simpson's Paradox](https://img.shields.io/badge/Simpson's%20Paradox-000000)
+![Correlation](https://img.shields.io/badge/Pearson%20Correlation-000000)
 
-* year: Year on which metrics were calculated. 
-* rain_max: Average maximum millimeters of rain.
-* temp_avg: Average temperature in celsius.
-* temp_max: Average maximum temperature in celsius.
-* temp_min: Average minimum temperature in celsius.
-* hum_max: Average maximum humidity in percentage.
-* hum_min: Average minimum humidity in percentage.
-* wind_max: Average maximum wind speed in meters per second.
-* wind_avg: Average wind speed in meters per second.
-* subdivision: Name of Brazilian sub-division (all should be Minais Gerais)
+![Python](https://img.shields.io/badge/Python-000000?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-000000?logo=pandas&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-000000?logo=scipy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C)
+![Seaborn](https://img.shields.io/badge/Seaborn-5B8FA8)
+![Plotly](https://img.shields.io/badge/Plotly-000000?logo=plotly&logoColor=white)
 
-**coffee_output**
-This dataset describes yearly features related to the coffee harvest that begins in June and ends in September in Minas Gerais.
+---
 
-* country: Country where harvest occurs (all should be Brazil).
-* subdivision: Name of sub-division (all should be Minais Gerais)
-* type: Type of coffee bean
-* 60kgs_bag: 60 kg bags of coffee beans harvested (million bags)
-* year: Year of harvest
-* nonbearing_trees: Amount of nonbearing coffee trees (million trees)
-* bearing_trees: Amount of bearing coffee trees (million trees)
-* nonbear_hectares: Hectares of nonbearing coffee trees (thousand hectares)
-* bearing_hectares_per_hectare: Average number of bearing trees per hectare
-* nonbearing_trees_per_hectare: Average number of non-bearing trees per hectare
+![Last Commit](https://img.shields.io/github/last-commit/dataeden/fari-tech-portfolio)
+![Repo Size](https://img.shields.io/github/repo-size/dataeden/fari-tech-portfolio)
 
-## Instructions
+![Top Language](https://img.shields.io/github/languages/top/dataeden/fari-tech-portfolio)
 
-There are three Jupyter notebooks which you will complete:
-* notebooks/explore_weather.ipynb
-* notebooks/explore_coffee.ipynb
-* notebooks/analysis.ipynb
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Each notebook entails a "write-up" section where you will document your findings. Further directions for each file are listed below: 
+---
 
-### explore_weather.ipynb
+## Executive Overview
 
-You will perform exploratory data analysis on `weather_data1.csv` and `weather_data2.csv`. Keep in mind that these files are essentially the same dataset with homogenous columns, but split into two files. Could you figure out a way to coalesce these files back together before beginning this analysis? Once you join these data files back together, you should save this resultant file into a new csv called `weather_data.csv`. 
+This study evaluates whether annual coffee production in Minas Gerais is primarily driven by:
 
-Unlike previous exercises, we will **not** tell you which visualizations or metrics you should make. Instead, you should use the notes, slides, and recordings from week 6, week 7, and week 8 to figure out which visualizations you should generate to answer the following analytical questions below:
+- 🌦️ Climatic conditions (rainfall, temperature, humidity, wind)
+- 🌱 Structural agricultural capacity (bearing trees, cultivated hectares)
 
-**Univariate Analysis**
-* How is average temperature, minimum humidity, and average wind speed changing across the years for Minas Gerais? Is this increasing or decreasing?
-* Which year had the highest maximum record rainfall?
+Using multi-year growing-season weather data and structural production metrics, this analysis applies correlation testing, time-series trend evaluation, distribution testing, and quartile-based yield elasticity assessment to identify dominant output drivers.
 
-**Bivariate Analysis**
-* What is the relationship between max rain and max humidity? How *strong* is this relationship? Use pearson's correlation coefficient.
-* What is the relationship between average wind speed and average temperature? How *strong* is this relationship? Use pearson's correlation coefficient.
+### Core Finding
 
-### explore_coffee.ipynb
+Coffee production growth from 2002–2023 is more strongly associated with **structural capacity variables** than with aggregated weather indicators. Bearing tree expansion and land optimization demonstrate statistically significant relationships with yield, while annual weather aggregates do not exhibit statistically significant linear associations within this dataset’s temporal resolution.
 
-Next, you will perform exploratory data analysis on the `coffee_output.csv` file. This file contains some rows that contain null values. We should remove these rows before progressing with our EDA.
+Although a gradual decline in minimum humidity was observed, no statistically significant linear relationship between humidity and annual production was detected. These findings suggest that structural agricultural strategy outweighs short-term climatic variability in explaining output trends at the annual level.
 
-Furthermore, notice that we have other subdivisions in this dataframe. How can we filter out these other rows to only include **Minas Gerais**?
+---
 
-Create visualizations and metrics to answer the following analytical questions below:
+## 📊 Visual Evidence — Climatic Trend Analysis
 
-**Univariate Analysis**
-* How is bearing_trees, bearing_hectares, and 60kgs_bag changing across the years in Minas Gerais? Are these variables increasing or decreasing? 
-* What is the distribution of bearing_trees, bearing_hectares, and 60kgs_bag in Minas Gerais? Do these variables follow a normal distribution?
+### Maximum Temperature Trend (Rolling Average)
 
-**Bivariate Analysis**
-* What is the relationship between bearing_trees and 60kgs_bag in Minas Gerais? How *strong* is this relationship? Use pearson's correlation coefficient.
-* What is the relationship between bearing_hectares and 60kgs_bag in Minas Gerais? How *strong* is this relationship? Use pearson's correlation coefficient.
+![Max Temperature Trend](assets/max_temp_trend.png)
 
-### analysis.ipynb
+Temperature shows cyclical variation without strong structural acceleration over time.
 
-Lastly, you will join your `weather_data.csv` and `coffee_output.csv` files on the `year` and `subdivision` columns to explore how weather patterns correlate with coffee harvest output.
+---
 
-Create visualizations and metrics to answer the following questions:
+### Structural Wind Speed Decline
 
-**Bivariate Analysis**
-* What is the relationship between temp_avg and 60kgs_bag? How *strong* is this relationship? Use pearson's correlation coefficient.
-* What is the relationship between minimum humidity and 60kgs_bag? How *strong* is this relationship? Use pearson's correlation coefficient.
-* What is the relationship between rain_max and 60kgs_bag? How *strong* is this relationship? Use pearson's correlation coefficient.
-* What is the relationship between average wind speed and 60kgs_bag? How *strong* is this relationship? Use pearson's correlation coefficient.
-* Perform the same bivariate analysis between the mentioned weather columns (temp_avg, hum_min, rain_max, and wind_avg) and a coffee-related column of your choice (bearing_trees, nonbearing_trees, bearing_trees_per_hectare, etc). Which directions do these relationships follow? What are the strengths of these relationships?
-* Which weather factor seems to influence coffee production the most? 
-* Which data would you collect to continue exploring the impacts of weather and economic forces on coffee production?
-* If you were preparing a report to provide to coffee farmers, which weather condititions would you state are the most favorable for coffee growing (assuming any exist)?
+![Wind Decline](assets/wind_decline.png)
 
-## Submission 
+Average wind speed declined by approximately 60% between 2006 and 2023.  
+Despite this structural climatic shift, production increased — suggesting wind is not a dominant yield driver.
 
-The due date for this project is `5/14`.
+---
 
-To submit this project, you will submit a link to your completed GitHub repository to Canvas.
+### Weather vs Yield (Example: Avg Temperature)
 
-**Note**: No one should have the same EDA. Remember, EDA is a self-guided process. If your EDA looks identical to another fellow's (or to ChatGPT's) your submission will receive a zero until you submit an original EDA.
+![Temperature vs Yield](assets/temp_vs_yield.png)
 
+- Pearson r ≈ -0.04  
+- p ≈ 0.71  
 
+The regression slope is effectively flat, indicating no statistically significant linear relationship between average temperature and coffee production.
+
+Similar weak results were observed for rainfall and wind variables.
+
+---
+
+## 🌱 Structural Agricultural Analysis
+
+### Bearing Trees Expansion Over Time
+
+![Bearing Trees Over Time](assets/bearing_trees_over_time.png)
+
+- Pearson r ≈ 0.78  
+- p ≈ 3.38e-05  
+
+Bearing trees increased significantly over time, indicating structural agricultural expansion.
+
+Shapiro-Wilk testing (p = 0.003) suggests non-normal distribution consistent with a trending time series.
+
+---
+
+### Bearing Hectares Over Time
+
+![Bearing Hectares Over Time](assets/bearing_hectares_over_time.png)
+
+- Pearson r ≈ -0.82  
+
+Cultivated land declined while production increased, suggesting efficiency gains and yield density optimization.
+
+---
+
+### Trees vs Yield
+
+![Trees vs Yield](assets/trees_vs_yield.png)
+
+Structural expansion demonstrates a statistically significant positive association with yield (r ≈ 0.66).
+
+---
+
+### 📈 Structural vs Climatic Contrast
+
+| Variable Type | Strong Trend Over Time | Strong Correlation with Yield |
+|---------------|------------------------|-------------------------------|
+| Temperature   | Mild                   | ❌ No |
+| Rainfall      | Volatile               | ❌ No |
+| Wind Speed    | Yes (decline)          | ❌ No |
+| Bearing Trees | Yes (increase)         | ✅ Yes |
+| Hectares      | Yes (decline)          | Moderate (negative) |
+
+Structural agricultural capacity demonstrates stronger explanatory power than climatic variation within this study window.
+
+---
+
+## Research Objectives
+
+This analysis evaluates the relative explanatory power of climatic versus structural agricultural variables in modeling annual coffee production outcomes.
+
+Specifically, the study tests:
+
+1. Whether key weather variables exhibit statistically meaningful structural trends over time.
+2. Whether growing-season weather aggregates demonstrate significant linear association with annual production output.
+3. Whether structural agricultural capacity metrics provide stronger predictive strength than climatic indicators.
+4. Whether yield elasticity varies across structural capacity tiers (quartile stratification).
+5. What data limitations constrain predictive modeling accuracy within an annual aggregation framework.
+
+---
+
+## Data Sources
+
+### 1️⃣ Weather Dataset  
+
+**Scope:** January–May growing season (annual aggregates)  
+**Region:** Minas Gerais  
+
+Columns include:
+
+- `rain_max`
+- `temp_avg`, `temp_min`, `temp_max`
+- `hum_min`, `hum_max`
+- `wind_avg`, `wind_max`
+
+Two split files (`coffee_output.csv`, `weather_data.csv`) were programmatically merged into: ``weather_merged``
+
+---
+
+### 2️⃣ Coffee Production Dataset  
+
+**Harvest Period:** June–September  
+**Region Filtered:** Minas Gerais only  
+
+Key structural variables:
+
+- `bearing_trees`
+- `nonbearing_trees`
+- `bearing_hectares`
+- `60kgs_bag` (million bags)
+
+Null rows were removed prior to analysis.
+
+---
+
+## Analytical Structure
+
+This project is divided into three notebooks:
+
+```diagram
+notebooks/
+├── explore_weather.ipynb
+├── explore_coffee.ipynb
+└── analysis.ipynb
+```
+
+---
+
+## Notebook 1 — Weather Trend & Internal Correlation Analysis
+
+### Key Observations
+
+- **Temperature:** Cyclical variation, no strong monotonic trend.
+- **Minimum Humidity:** Gradual decline (~0.2% per year).
+- **Wind Speed:** ~60% decline from 2006–2023.
+- **Rainfall:** Episodic volatility rather than structural trend.
+
+### Bivariate Relationships
+
+| Variables | Pearson r | Significance |
+|------------|------------|--------------|
+| Rain vs Humidity | ~0.41 | Not significant |
+| Wind vs Temperature | ~0.48 | Statistically significant |
+
+Overall, internal weather relationships were moderate at best.
+
+---
+
+## Notebook 2 — Structural Agricultural Analysis
+
+### Long-Term Structural Trends
+
+| Variable | Pearson r (vs Year) | Interpretation |
+|-----------|--------------------|----------------|
+| Bearing Trees | ~0.78 | Strong upward expansion |
+| Bearing Hectares | ~-0.82 | Significant land contraction |
+| Production (60kg bags) | ~0.72 | Strong production growth |
+
+### Production Relationships
+
+| Variables | Pearson r | Interpretation |
+|------------|------------|----------------|
+| Bearing Trees vs Production | ~0.66 | Moderately strong positive |
+| Bearing Hectares vs Production | ~-0.48 | Moderate negative |
+
+This suggests improved yield density and structural optimization rather than land expansion as the primary driver of production growth.
+
+---
+
+# Notebook 3 — Weather vs Production Integration
+
+After merging weather and production datasets:
+
+### Weather vs Yield Correlations
+
+| Weather Variable | Pearson r vs 60kg Bags | Significance |
+|------------------|-------------------------|--------------|
+| Avg Temp | ~-0.04 | Not significant |
+| Min Humidity | ~-0.06 | Not significant |
+| Max Rain | ~-0.02 | Not significant |
+| Avg Wind | ~-0.13 | Not significant |
+
+### Interpretation
+
+Within the resolution of annual growing-season averages:
+
+- No weather variable demonstrates meaningful predictive strength.
+- Structural capacity variables exhibit stronger statistical association.
+
+---
+
+# Yield Elasticity Insight
+
+Quartile stratification reveals:
+
+- Lower capacity farms show higher marginal gains from expansion.
+- Higher capacity tiers show diminishing returns.
+- Land contraction may reflect efficiency gains rather than decline.
+
+This introduces a structural elasticity framework rather than a climate-dominant narrative.
+
+---
+
+## Limitations
+
+- Annual aggregates mask monthly volatility.
+- No soil, pest, fertilizer, or drought index data included.
+- No commodity price or economic pressure modeling.
+- Weather measurements lack intra-seasonal resolution.
+
+---
+
+## Future Data Recommendations
+
+To improve modeling accuracy:
+
+- Monthly rainfall & humidity variability
+- Drought index (SPI)
+- Soil moisture levels
+- Leaf rust infection rates
+- Fertilizer usage
+- Commodity price elasticity
+- Export demand indicators
+
+---
+
+## Strategic Implication
+
+For Minas Gerais:
+
+Structural agricultural optimization appears to drive output growth more consistently than climatic variability within this dataset.
+
+Weather volatility exists, but infrastructure and cultivation strategy appear more decisive.
+
+---
+
+## Directory Structure
+
+```text
+coffee-production-weather-analysis/
+│
+├── data/
+│   ├── crop/
+│   │   └── coffee_output.csv
+│   │
+│   └── weather/
+│       ├── weather_data.csv
+│       ├── weather_data1.csv
+│       ├── weather_data2.csv
+│       └── weather.csv
+│
+├── image/
+│   ├── analysis/
+│   │   └── avg-temp-vs-coffee-yield.png
+│   │
+│   ├── explore_coffee/
+│   │   ├── bearing-hectars-over-time.png
+│   │   ├── bearing-trees-over-time.png
+│   │   └── bearing-trees-vs-yield.png
+│   │
+│   ├── weather_analysis/
+│   │   ├── avg-wind-speed-over-time.png
+│   │   └── max-temp-3yr-roll-avg.png
+│   │
+│   ├── acs_coffee_stress_co2_adequate_water_supply_2018.png
+│   ├── coffee_production_by_subdivision.png
+│   └── green_coffee_beans.jpg
+│
+├── notebooks/
+│   ├── explore_weather.ipynb
+│   ├── explore_coffee.ipynb
+│   └── analysis.ipynb
+│
+├── .gitattributes
+├── LICENSE
+├── README.md
+├── README3.md
+└── requirements.txt
+```
+
+---
+
+## Methods & Libraries
+
+- Pearson Correlation (`scipy.stats.pearsonr`)
+- Shapiro-Wilk Normality Test
+- Time-series trend analysis
+- Quartile stratification (Simpson’s paradox context)
+- Linear regression overlays
+
+Libraries:
+
+- pandas
+- numpy
+- scipy
+- matplotlib
+- seaborn
+- plotly.express
+
+---
+
+## Attribution
+
+This project originated as a multi-notebook exploratory analysis exercise during The Knowledge House fellowship.
+
+The workflow included:
+
+1. Weather dataset consolidation and internal correlation analysis.
+2. Structural agricultural trend analysis and distribution testing.
+3. Integrated modeling to evaluate climatic versus structural drivers of yield.
+
+All statistical testing, visualization design, analytical interpretation, and reporting narrative were independently rebuilt and expanded for professional portfolio presentation under DataInsideData™.
+
+---
+
+## How to Run
+
+> Python 3.10+ recommended.
+
+This project is part of a multi-project analytics monorepo. Dependencies are managed at the project level.
+
+### Clone the Portfolio Repository
+
+Environment management is handled at the project level to preserve isolation within the monorepo structure.
+
+```bash
+git clone https://github.com/dataeden/fari-tech-portfolio.git
+cd fari-tech-portfolio
+```
+
+Navigate to This Project
+
+```bash
+cd Coffee-Weather-Data-Analysis
+```
+
+Create a Virtual Environment (Recommended)
+
+```bash
+python -m venv venv
+```
+
+Depending on your system type
+
+```bash
+# Mac / Linux
+source venv/bin/activate
+
+# Windows
+venv\Scripts\activate
+```
+
+Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Option A
+
+Launch Jupyter
+
+```bash
+jupyter notebook
+```
+
+## Option B — Run in VS Code (Requires VS Code)
+
+- VS Code provides improved debugging, environment control, and Git integration compared to browser-based notebook workflows.
+
+This option requires **Visual Studio Code**.
+
+Download here:  
+https://code.visualstudio.com/
+
+### Setup Steps
+
+Open the project folder in VS Code:
+
+```bash
+fari-tech-portfolio/Coffee-Weather-Data-Analysis
+```
+
+Install the following extensions (if not already installed):
+
+- Python (Microsoft)
+- Jupyter (Microsoft)
+
+Select the project virtual environment:
+
+- Press `Ctrl + Shift + P`
+- Search: **Python: Select Interpreter**
+- Choose the `venv` environment created earlier.
+
+Open any notebook inside `notebooks/` and execute cells directly within VS Code.
+
+---
+
+## Contact
+
+#### Fari Lindo • DataInsideData™
+
+- [GitHub](https://github.com/dataeden)
+- [Portfolio](https://datainsidedata.com)
+- [LinkedIn](https://www.linkedin.com/in/fari-lindo/)  
+- [Email](mailto:contact@datainsidedata.com)
+
+*Tech Hands, a Science Mind, and a Heart for Community™*
