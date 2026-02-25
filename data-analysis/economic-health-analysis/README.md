@@ -10,9 +10,7 @@
 > Part of the DataInsideData™ technical portfolio monorepo.  
 > A data-driven examination of income, cost-of-living, and liquidity trends across the United States and global regions.
 
-#### Fari Lindo • Lead Analyst  
-
-DataInsideData™ Portfolio Project
+#### Fari Lindo • Lead Analyst
 
 **Collaborators:** James Ceus, Jessenia Diaz, Bakari Sibert, Sherla
 Zhagnay
@@ -270,6 +268,7 @@ for long-term financial stability.
 
 ## Directory Structure
 
+```text
     us-economy-analysis/
     │
     ├── assets/
@@ -294,6 +293,7 @@ for long-term financial stability.
     ├── LICENSE
     ├── README.md
     └── requirements.txt
+```
 
 ---
 
