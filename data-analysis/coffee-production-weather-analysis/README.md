@@ -237,7 +237,7 @@ This suggests improved yield density and structural optimization rather than lan
 
 ---
 
-# Notebook 3 — Weather vs Production Integration
+## Notebook 3 — Weather vs Production Integration
 
 After merging weather and production datasets:
 
@@ -328,7 +328,7 @@ coffee-production-weather-analysis/
 │   │   ├── bearing-trees-over-time.png
 │   │   └── bearing-trees-vs-yield.png
 │   │
-│   ├── weather_analysis/
+│   ├── explore_weather/
 │   │   ├── avg-wind-speed-over-time.png
 │   │   └── max-temp-3yr-roll-avg.png
 │   │
