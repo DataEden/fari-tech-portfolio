@@ -59,11 +59,12 @@ Although a gradual decline in minimum humidity was observed, no statistically si
 <div align="center">
 Temperature shows cyclical variation without strong structural acceleration over time.
 </div>
+
 ---
 
 ### Structural Wind Speed Decline
 
-![Wind Decline](images\weather_analysis\avg-wind-speed-over-time.png)
+![Wind Decline](images/weather_analysis/avg-wind-speed-over-time.png)
 
 <div align="center">
 Average wind speed declined by approximately 60% between 2006 and 2023.  
@@ -74,7 +75,7 @@ Despite this structural climatic shift, production increased — suggesting wind
 
 ### Weather vs Yield (Example: Avg Temperature)
 
-![Temperature vs Yield](images\anaylysis\avg-temp-vs-coffee-yield.png)
+![Temperature vs Yield](images/anaylysis/avg-temp-vs-coffee-yield.png)
 
 - Pearson r ≈ -0.04  
 - p ≈ 0.71  
@@ -91,7 +92,7 @@ The regression slope is effectively flat, indicating no statistically significan
 
 ### Bearing Trees Expansion Over Time
 
-![Bearing Trees Over Time](images\explore_coffee\bearing-trees-over-time.png)
+![Bearing Trees Over Time](images/explore_coffee/bearing-trees-over-time.png)
 
 <div align="center">
 Bearing trees increased significantly over time, indicating structural agricultural expansion.
@@ -106,7 +107,7 @@ Bearing trees increased significantly over time, indicating structural agricultu
 
 ### Bearing Hectares Over Time
 
-![Bearing Hectares Over Time](images\explore_coffee\bearing-hectars-over-time.png)
+![Bearing Hectares Over Time](images/explore_coffee/bearing-hectars-over-time.png)
 
 <div align="center">
 Cultivated land declined while production increased, suggesting efficiency gains and yield density optimization.
@@ -118,7 +119,7 @@ Cultivated land declined while production increased, suggesting efficiency gains
 
 ### Trees vs Yield
 
-![Trees vs Yield](images\explore_coffee\bearing-trees-vs-yield.png)
+![Trees vs Yield](images/explore_coffee/bearing-trees-vs-yield.png)
 
 Structural expansion demonstrates a statistically significant positive association with yield (r ≈ 0.66).
 
