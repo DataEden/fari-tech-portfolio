@@ -30,8 +30,6 @@
 ![Last Commit](https://img.shields.io/github/last-commit/dataeden/fari-tech-portfolio)
 ![Repo Size](https://img.shields.io/github/repo-size/dataeden/fari-tech-portfolio)
 
-![Top Language](https://img.shields.io/github/languages/top/dataeden/fari-tech-portfolio)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -57,31 +55,35 @@ Although a gradual decline in minimum humidity was observed, no statistically si
 
 ### Maximum Temperature Trend (Rolling Average)
 
-![Max Temperature Trend](assets/max_temp_trend.png)
-
+![Max Temperature Trend](images/weather_analysis/max-temp-3yr-roll-avg.png)
+<div align="center">
 Temperature shows cyclical variation without strong structural acceleration over time.
-
+</div>
 ---
 
 ### Structural Wind Speed Decline
 
-![Wind Decline](assets/wind_decline.png)
+![Wind Decline](images\weather_analysis\avg-wind-speed-over-time.png)
 
+<div align="center">
 Average wind speed declined by approximately 60% between 2006 and 2023.  
 Despite this structural climatic shift, production increased — suggesting wind is not a dominant yield driver.
+</div>
 
 ---
 
 ### Weather vs Yield (Example: Avg Temperature)
 
-![Temperature vs Yield](assets/temp_vs_yield.png)
+![Temperature vs Yield](images\anaylysis\avg-temp-vs-coffee-yield.png)
 
 - Pearson r ≈ -0.04  
 - p ≈ 0.71  
 
+<div align="center">
 The regression slope is effectively flat, indicating no statistically significant linear relationship between average temperature and coffee production.
+</div>
 
-Similar weak results were observed for rainfall and wind variables.
+> **Similar weak results were observed for rainfall and wind variables**.
 
 ---
 
@@ -89,30 +91,34 @@ Similar weak results were observed for rainfall and wind variables.
 
 ### Bearing Trees Expansion Over Time
 
-![Bearing Trees Over Time](assets/bearing_trees_over_time.png)
+![Bearing Trees Over Time](images\explore_coffee\bearing-trees-over-time.png)
+
+<div align="center">
+Bearing trees increased significantly over time, indicating structural agricultural expansion.
+</div>
 
 - Pearson r ≈ 0.78  
 - p ≈ 3.38e-05  
 
-Bearing trees increased significantly over time, indicating structural agricultural expansion.
-
-Shapiro-Wilk testing (p = 0.003) suggests non-normal distribution consistent with a trending time series.
+**Shapiro-Wilk testing (p = 0.003) suggests non-normal distribution consistent with a trending time series**.
 
 ---
 
 ### Bearing Hectares Over Time
 
-![Bearing Hectares Over Time](assets/bearing_hectares_over_time.png)
+![Bearing Hectares Over Time](images\explore_coffee\bearing-hectars-over-time.png)
+
+<div align="center">
+Cultivated land declined while production increased, suggesting efficiency gains and yield density optimization.
+</div>
 
 - Pearson r ≈ -0.82  
-
-Cultivated land declined while production increased, suggesting efficiency gains and yield density optimization.
 
 ---
 
 ### Trees vs Yield
 
-![Trees vs Yield](assets/trees_vs_yield.png)
+![Trees vs Yield](images\explore_coffee\bearing-trees-vs-yield.png)
 
 Structural expansion demonstrates a statistically significant positive association with yield (r ≈ 0.66).
 
@@ -122,13 +128,15 @@ Structural expansion demonstrates a statistically significant positive associati
 
 | Variable Type | Strong Trend Over Time | Strong Correlation with Yield |
 |---------------|------------------------|-------------------------------|
-| Temperature   | Mild                   | ❌ No |
-| Rainfall      | Volatile               | ❌ No |
-| Wind Speed    | Yes (decline)          | ❌ No |
-| Bearing Trees | Yes (increase)         | ✅ Yes |
+| Temperature   | Mild                   | 👎 No | 
+| Rainfall      | Volatile               | 👎 No |
+| Wind Speed    | Yes (decline)          | 👎 No |
+| Bearing Trees | Yes (increase)         | 👍 Yes |
 | Hectares      | Yes (decline)          | Moderate (negative) |
 
+<div align="center">
 Structural agricultural capacity demonstrates stronger explanatory power than climatic variation within this study window.
+</div>
 
 ---
 
