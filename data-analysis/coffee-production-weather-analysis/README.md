@@ -398,7 +398,7 @@ cd fari-tech-portfolio
 Navigate to This Project
 
 ```bash
-cd Coffee-Weather-Data-Analysis
+cd coffee-production-weather-analysis
 ```
 
 Create a Virtual Environment (Recommended)
@@ -445,7 +445,7 @@ https://code.visualstudio.com/
 Open the project folder in VS Code:
 
 ```bash
-fari-tech-portfolio/Coffee-Weather-Data-Analysis
+fari-tech-portfolio/coffee-production-weather-analysis
 ```
 
 Install the following extensions (if not already installed):
