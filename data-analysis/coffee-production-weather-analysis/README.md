@@ -55,7 +55,7 @@ Although a gradual decline in minimum humidity was observed, no statistically si
 
 ### Maximum Temperature Trend (Rolling Average)
 
-![Max Temperature Trend](images/weather_analysis/max-temp-3yr-roll-avg.png)
+![Max Temperature Trend](images/explore_weather/max-temp-3yr-roll-avg.png)
 <div align="center">
 Temperature shows cyclical variation without strong structural acceleration over time.
 </div>
@@ -64,12 +64,10 @@ Temperature shows cyclical variation without strong structural acceleration over
 
 ### Structural Wind Speed Decline
 
-![Wind Decline](images/weather_analysis/avg-wind-speed-over-time.png)
+![Wind Decline](images/explore_weather/avg-wind-speed-over-time.png)
 
-<div align="center">
 Average wind speed declined by approximately 60% between 2006 and 2023.  
 Despite this structural climatic shift, production increased — suggesting wind is not a dominant yield driver.
-</div>
 
 ---
 
@@ -80,9 +78,7 @@ Despite this structural climatic shift, production increased — suggesting wind
 - Pearson r ≈ -0.04  
 - p ≈ 0.71  
 
-<div align="center">
 The regression slope is effectively flat, indicating no statistically significant linear relationship between average temperature and coffee production.
-</div>
 
 > **Similar weak results were observed for rainfall and wind variables**.
 
@@ -109,9 +105,7 @@ Bearing trees increased significantly over time, indicating structural agricultu
 
 ![Bearing Hectares Over Time](images/explore_coffee/bearing-hectars-over-time.png)
 
-<div align="center">
 Cultivated land declined while production increased, suggesting efficiency gains and yield density optimization.
-</div>
 
 - Pearson r ≈ -0.82  
 
