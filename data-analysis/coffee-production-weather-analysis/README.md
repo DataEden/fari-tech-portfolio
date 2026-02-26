@@ -73,7 +73,7 @@ Despite this structural climatic shift, production increased — suggesting wind
 
 ### Weather vs Yield (Example: Avg Temperature)
 
-![Temperature vs Yield](images/anaylysis/avg-temp-vs-coffee-yield.png)
+![Temperature vs Yield](images/analysis/avg-temp-vs-coffee-yield.png)
 
 - Pearson r ≈ -0.04  
 - p ≈ 0.71  
@@ -103,7 +103,7 @@ Bearing trees increased significantly over time, indicating structural agricultu
 
 ### Bearing Hectares Over Time
 
-![Bearing Hectares Over Time](images/explore_coffee/bearing-hectars-over-time.png)
+![Bearing Hectares Over Time](images/explore_coffee/bearing-hectares-over-time.png)
 
 Cultivated land declined while production increased, suggesting efficiency gains and yield density optimization.
 
@@ -259,7 +259,7 @@ Within the resolution of annual growing-season averages:
 
 ---
 
-# Yield Elasticity Insight
+## Yield Elasticity Insight
 
 Quartile stratification reveals:
 
@@ -298,7 +298,7 @@ To improve modeling accuracy:
 
 For Minas Gerais:
 
-Structural agricultural optimization appears to drive output growth more consistently than climatic variability within this dataset.
+Within annual-resolution data, structural agricultural optimization demonstrates stronger statistical association with output growth than aggregated climatic indicators.
 
 Weather volatility exists, but infrastructure and cultivation strategy appear more decisive.
 
@@ -319,12 +319,12 @@ coffee-production-weather-analysis/
 │       ├── weather_data2.csv
 │       └── weather.csv
 │
-├── image/
+├── images/
 │   ├── analysis/
 │   │   └── avg-temp-vs-coffee-yield.png
 │   │
 │   ├── explore_coffee/
-│   │   ├── bearing-hectars-over-time.png
+│   │   ├── bearing-hectares-over-time.png
 │   │   ├── bearing-trees-over-time.png
 │   │   └── bearing-trees-vs-yield.png
 │   │
@@ -341,7 +341,6 @@ coffee-production-weather-analysis/
 │   ├── explore_coffee.ipynb
 │   └── analysis.ipynb
 │
-├── .gitattributes
 ├── LICENSE
 ├── README.md
 ├── README3.md
@@ -350,18 +349,25 @@ coffee-production-weather-analysis/
 
 ---
 
-## Methods & Libraries
+## Methods & Analytical Framework
+
+This analysis applies the following statistical techniques:
 
 - Pearson Correlation (`scipy.stats.pearsonr`)
 - Shapiro-Wilk Normality Test
-- Time-series trend analysis
-- Quartile stratification (Simpson’s paradox context)
+- Time-series trend evaluation
+- Quartile stratification (yield elasticity analysis)
 - Linear regression overlays
 
-Libraries:
+### Modeling Scope & Assumptions
+
+This study evaluates **linear associations only** using Pearson correlation and regression overlays. It does not test nonlinear relationships, interaction effects, or lagged climatic impacts across growing seasons.
+
+Findings should therefore be interpreted within the context of annual-resolution linear modeling.
+
+### Libraries Used
 
 - pandas
-- numpy
 - scipy
 - matplotlib
 - seaborn
