@@ -21,7 +21,6 @@
 
 ![Last Commit](https://img.shields.io/github/last-commit/dataeden/fari-tech-portfolio) ![Repo Size](https://img.shields.io/github/repo-size/dataeden/fari-tech-portfolio)
 
-![Top Language](https://img.shields.io/github/languages/top/dataeden/fari-tech-portfolio)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -220,7 +219,9 @@ This mirrors common physiological patterns observed in consumer wearable devices
 
 Generated time-series plots are saved to:
 
+```markdown
     images/
+```
 
 Each phase produces an independent visualization to prevent overwrite and support comparative review.
 
@@ -290,7 +291,6 @@ python main.py
 **Generated visualizations will be saved to**:
 
 ```markdown
-
 images/
 ```
 
