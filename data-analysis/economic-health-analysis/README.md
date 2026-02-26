@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="../us-economy-analysis/assets/econ_health_banner.png" alt="Project Banner" width="100%">
+  <img src="assets/econ_health_banner.png" alt="Project Banner" width="100%">
 </p>
 
 ---
