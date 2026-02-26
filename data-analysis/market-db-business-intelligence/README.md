@@ -22,7 +22,6 @@ Business Intelligence Case Study | SQL + Python
 
 ![Last Commit](https://img.shields.io/github/last-commit/dataeden/fari-tech-portfolio)
 ![Repo Size](https://img.shields.io/github/repo-size/dataeden/fari-tech-portfolio)
-![Top Language](https://img.shields.io/github/languages/top/dataeden/fari-tech-portfolio)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -221,6 +220,8 @@ This analysis addresses 8 core business questions:
 
 ## Repository Structure
 
+```text
+
     market-db-business-intelligence/
     ├─ db/
     │  └─ Market.db
@@ -236,6 +237,8 @@ This analysis addresses 8 core business questions:
     ├─ LICENSE.txt 
     ├─ README.md
     ├─ requirements.txt 
+```
+
 ---
 
 ## How to Run
