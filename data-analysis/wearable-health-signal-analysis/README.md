@@ -19,8 +19,8 @@
 
 ---
 
-![Last Commit](https://img.shields.io/github/last-commit/dataeden/fari-tech-portfolio) ![Repo Size](https://img.shields.io/github/repo-size/dataeden/fari-tech-portfolio)
-
+![Last Commit](https://img.shields.io/github/last-commit/dataeden/fari-tech-portfolio) 
+![Repo Size](https://img.shields.io/github/repo-size/dataeden/fari-tech-portfolio)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
