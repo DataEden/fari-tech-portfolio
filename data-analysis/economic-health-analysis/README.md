@@ -1,7 +1,7 @@
 
-<p align="center">
+<div align="center">
   <img src="assets/econ_health_banner.png" alt="Project Banner" width="100%">
-</p>
+</div>
 
 ---
 
