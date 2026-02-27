@@ -1,3 +1,11 @@
+<div align="center">
+  <img src="images/pexels-alfin-auzikri-2.jpg" alt="Wearable Watch - Photograhy by Alfin Auzikri" width="80%">
+
+  <p>
+    <em>Photography by Alfin Auzikri.</em>
+  </p>
+</div>
+
 # Wearable Health Signal Analysis
 
 > Part of the DataInsideData™ technical portfolio monorepo.

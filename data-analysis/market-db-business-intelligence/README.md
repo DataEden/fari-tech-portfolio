@@ -1,3 +1,11 @@
+<div align="center">
+  <img src="images/pexels-shipment-containers-tom-fisk.jpg" alt="Shipment Containers - Photograhy by Tom Fisk" width="80%">
+
+  <p>
+    <em>Photography by Tom Fisk.</em>
+  </p>
+</div>
+
 # Market.db Business Intelligence Report
 
 > Part of the DataInsideData™ technical portfolio monorepo.
