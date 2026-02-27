@@ -1,3 +1,12 @@
+<div align="center">
+  <img src="images/pexels-mina-gerais-coffee-cherries-azzam-zicc.jpg" alt="Coffee cherries in Minas Gerais" width="800">
+
+  <p>
+    <em>Photography by Azzam Zicc.</em>
+  </p>
+</div>
+
+
 # ☕ Structural vs Climatic Drivers of Coffee Production  
 
 ## Minas Gerais, Brazil (2002–2023)
