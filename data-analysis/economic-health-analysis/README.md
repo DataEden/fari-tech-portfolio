@@ -96,7 +96,7 @@ selected global regions.
 
 **Figure 2 — Real Personal Consumption During Recessions**
 
-![Real Personal Consumption During Recessions](assets/images\Real-Personal-Consumption-During-Recessions.png)
+![Real Personal Consumption During Recessions](assets/images/Real-Personal-Consumption-During-Recessions.png)
 
 **<div align="center"> Recession overlays reveal asymmetric recovery dynamics: prolonged contraction post-2008 versus rapid stimulus-accelerated rebound in 2020.</div>**
 
