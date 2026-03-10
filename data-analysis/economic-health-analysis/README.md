@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="assets/econ_health_banner.png" alt="Project Banner" width="100%">
+  <img src="assets/images/econ_health_banner.png" alt="Project Banner" width="100%">
 </div>
 
 ---
@@ -88,7 +88,7 @@ selected global regions.
 
 **Figure 1 —  U.S. Disposable Income (Nominal vs Real)**
 
-![Nominal vs Real Disposable Income](/data-analysis/us-economy-analysis/assets/Nominal-vs-Real-Disposable-Income.png)
+![Nominal vs Real Disposable Income](assets/images/Nominal-vs-Real-Disposable-Income.png)
 
 **<div align="center">Nominal income growth masks inflation-adjusted stagnation, highlighting post-pandemic purchasing power compression.</div>**
 
@@ -96,7 +96,7 @@ selected global regions.
 
 **Figure 2 — Real Personal Consumption During Recessions**
 
-![Real Personal Consumption During Recessions](/data-analysis/us-economy-analysis/assets/Real-Personal-Consumption-During-Recessions.png)
+![Real Personal Consumption During Recessions](assets/images\Real-Personal-Consumption-During-Recessions.png)
 
 **<div align="center"> Recession overlays reveal asymmetric recovery dynamics: prolonged contraction post-2008 versus rapid stimulus-accelerated rebound in 2020.</div>**
 
@@ -104,14 +104,14 @@ selected global regions.
 
 **Figure 3 — Income vs Consumption Efficiency (Behavioral View)**
 
-![Income vs Consumption Efficiency](/data-analysis/us-economy-analysis/assets/Income-vs-Consumption-Efficiency-Behavioral-View.png)
+![Income vs Consumption Efficiency](assets/images/Income-vs-Consumption-Efficiency-Behavioral-View.png)
 **<div align="center"> Income and consumption maintain strong structural correlation, with temporary efficiency distortions during crisis periods.</div>**
 
 ---
 
 **Figure 4 — Cost of Living vs Income by Region**
 
-![Regional Cost of Living](/data-analysis/us-economy-analysis/assets/Regional-Cost-Structure-Comparison.png)
+![Regional Cost of Living](assets/images/Regional-Cost-Structure-Comparison.png)
 **<div align="center"> Housing remains the dominant global expenditure component, with tax and savings variability shaping disposable income capacity.</div>**
 
 ---
