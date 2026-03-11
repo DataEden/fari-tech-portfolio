@@ -48,7 +48,7 @@ Interpret a normalized ERD, construct SQL queries to answer business questions,
 validate outputs, and communicate findings using data visualizations and
 statistical analysis.
 
-> *All insights are supported by query outputs generated in the [Jupyter Notebook](/data-analysis/market-db-business-intelligence/notebooks/adhoc_report.ipynb)*.
+> *All insights are supported by query outputs generated in the [Jupyter Notebook](notebooks/adhoc_report.ipynb)*.
 
 ---
 
