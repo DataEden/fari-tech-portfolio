@@ -42,11 +42,9 @@ relational SQLite database (`Market.db`, Northwind-style schema).
 
 **<div align="center">ERD Diagram of Market.db Schema</div>**
 
-The objective was to simulate a real-world analyst workflow:
+The goal of this project was to model a real‑world analyst workflow:
 
-Interpret a normalized ERD, construct SQL queries to answer business questions,
-validate outputs, and communicate findings using data visualizations and
-statistical analysis.
+Interpreting a normalized ERD, writing SQL queries to answer operational and strategic business questions, validating results for accuracy, and communicating insights through clear visualizations and statistical reasoning.
 
 > *All insights are supported by query outputs generated in the [Jupyter Notebook](notebooks/adhoc_report.ipynb)*.
 
