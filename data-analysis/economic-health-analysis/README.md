@@ -60,7 +60,7 @@ selected global regions.
 - Global dataset: 21 countries × 24 years (500 country-year observations)
 - U.S. macro dataset: Monthly time-series (2007–2025, 216+ observations)
 
- > Volatility between nominal and real income post-2021 represents the strongest macro stress signal observed in this dataset.
+> Volatility between nominal and real income post-2021 represents the strongest macro stress signal observed in this dataset.
 
 > Overall, the U.S. economy demonstrates structural resilience, but inflation-adjusted income stagnation presents emerging liquidity constraints.
 
@@ -90,7 +90,7 @@ selected global regions.
 
 ![Nominal vs Real Disposable Income](assets/images/Nominal-vs-Real-Disposable-Income.png)
 
-**<div align="center">Nominal income growth masks inflation-adjusted stagnation, highlighting post-pandemic purchasing power compression.</div>**
+*<div align="center">Nominal income growth masks inflation-adjusted stagnation, highlighting post-pandemic purchasing power compression.</div>*
 
 ---
 
@@ -98,21 +98,21 @@ selected global regions.
 
 ![Real Personal Consumption During Recessions](assets/images/Real-Personal-Consumption-During-Recessions.png)
 
-**<div align="center"> Recession overlays reveal asymmetric recovery dynamics: prolonged contraction post-2008 versus rapid stimulus-accelerated rebound in 2020.</div>**
+*<div align="center"> Recession overlays reveal asymmetric recovery dynamics: prolonged contraction post-2008 versus rapid stimulus-accelerated rebound in 2020.</div>*
 
 ---
 
 **Figure 3 — Income vs Consumption Efficiency (Behavioral View)**
 
 ![Income vs Consumption Efficiency](assets/images/Income-vs-Consumption-Efficiency-Behavioral-View.png)
-**<div align="center"> Income and consumption maintain strong structural correlation, with temporary efficiency distortions during crisis periods.</div>**
+*<div align="center"> Income and consumption maintain strong structural correlation, with temporary efficiency distortions during crisis periods.</div>*
 
 ---
 
 **Figure 4 — Cost of Living vs Income by Region**
 
 ![Regional Cost of Living](assets/images/Regional-Cost-Structure-Comparison.png)
-**<div align="center"> Housing remains the dominant global expenditure component, with tax and savings variability shaping disposable income capacity.</div>**
+*<div align="center"> Housing remains the dominant global expenditure component, with tax and savings variability shaping disposable income capacity.</div>*
 
 ---
 
