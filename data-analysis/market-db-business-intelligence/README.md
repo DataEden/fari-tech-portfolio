@@ -46,8 +46,6 @@ The goal of this project was to model a real‑world analyst workflow:
 
 Interpreting a normalized ERD, writing SQL queries to answer operational and strategic business questions, validating results for accuracy, and communicating insights through clear visualizations and statistical reasoning.
 
-> *All insights are supported by query outputs generated in the [Jupyter Notebook](notebooks/adhoc_report.ipynb)*.
-
 ---
 
 ## Executive Summary
