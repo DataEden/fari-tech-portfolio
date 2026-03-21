@@ -6,7 +6,6 @@
   </p>
 </div>
 
-
 # ☕ Structural vs Climatic Drivers of Coffee Production  
 
 ## Minas Gerais, Brazil (2002–2023)
