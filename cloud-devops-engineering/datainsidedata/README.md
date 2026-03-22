@@ -109,6 +109,8 @@ For hiring managers, collaborators, and technical reviewers, this project shows 
 
 ## Architecture at a Glance
 
+### Homepage View
+
 <div align="center"> 
   <img src="images/homepage-view.png" alt="Full-page screenshot of the Data Inside Data homepage" width="1500">
   
