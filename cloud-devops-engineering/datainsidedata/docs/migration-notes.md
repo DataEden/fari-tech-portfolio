@@ -1,21 +1,6 @@
----
-noteId: "6deb85d022db11f194fd9f5d564fbc14"
-tags:
-  - "jekyll"
-  - "minima"
-  - "minimal-mistakes"
-  - "migration"
-  - "devops"
-title: "Migrating from Minima to Minimal Mistakes (MM) — A Clean Approach"
-date: "2026-01-26 12:00:00 -0500"
-categories:
-  - "jekyll"
-  - "minimal-mistakes"
-excerpt: "A step-by-step migration guide from Minima to Minimal Mistakes, including config, overrides, navigation, projects collections, and footer fixes."
-toc: true
-toc_sticky: true
+# Migration from Minima to Minimal Mistakes (MM) — A Clean Approach
 
----
+## Step-by-step migration guide from Minima to Minimal Mistakes, including config, overrides, navigation, projects collections, and footer fixes
 
 ## 1. Introduction
 
@@ -56,7 +41,9 @@ framework.
 
 ## Non–Built-In Search Options (Supported via Overrides or Integrations)
 
-Lunr is great for relatively large sites, but there are non-built-in options that you may need to consider when your site gets **very** large:
+Lunr is great for relatively large sites, but there are non-built-in options that can be implemented when the site gets **very** large:
+
+**Non-built-in Search Options**:
 
 - **Algolia DocSearch**
   - Requires the `jekyll-algolia` plugin
@@ -107,15 +94,13 @@ You must respect components like
 
 ## 3. Clean Migration Strategy (Avoiding Collisions)
 
-If you previously customized [Minima](https://datainsidedata.com/projects/jekyll-from-zero-to-production/)
+If [Minima](https://datainsidedata.com/projects/jekyll-from-zero-to-production/) was previously customized
 
-Jekyll will prefer your local `_includes/*` over theme includes.
-
-That causes silent breakage.
+Jekyll will prefer local `_includes/*` over theme includes (this causes silent breakage).
 
 ### Step 1 — Disable Minima Overrides
 
-Rename old overrides
+Rename (or delete) old overrides
 
 ```jekyll
 _includes/header.html → header.minima.bak
@@ -125,7 +110,7 @@ _includes/footer.html → footer.minima.bak
 
 Let MM load clean defaults first. Then override intentionally.
 
-- After things work and you're comfortable, remove these files or place in a backup folder.
+- place in a backup folder.
 
 ## 4. Correct `_config.yml` Setup
 
@@ -180,7 +165,7 @@ collections:
 
 - output: true is critical — without it, Jekyll will not generate pages for this collection.
 
-**Works with**
+**Works with**:
 
 ```bash
 _projects/
@@ -218,7 +203,7 @@ main:
     url: /contact/
 ```
 
-### If your "Posts" link throw 404s
+### If "Posts" link throw 404s
 
 - Check permalink
 - Check navigation.yml
@@ -247,22 +232,24 @@ And the file must include the following so that MM can import necessary skins, s
 // Import full MM framework
 @import "minimal-mistakes";
 
-// Load your custom overrides last
+// Load custom overrides last
 @import "minimal-mistakes/custom";
 
 ```
 
-- Order matters here. Custom overrides must load after the core framework to prevent specificity issues.
+**Order Matters Here**:
 
-Put all styling overrides in:
+- Custom overrides must load after the core framework to prevent specificity issues.
+
+- Place all styling overrides in
 
 ```bash
 _sass/minimal-mistakes/_custom.scss
 ```
 
-Avoid maintaining separate Minima legacy `custom.css` files long-term.
+Renamed and moved Minima legacy `custom.css` file(s) to a backup folder in another directory.
 
-- I renamed mine and moved to a backup folder in another directory.
+- Avoid maintaining separate  Minima legacy `custom.css` long-term.
 
 ---
 
@@ -314,7 +301,7 @@ This means:
 - Navigation structure should live in data files  
 - Layout overrides should be avoided unless absolutely necessary  
 
-If spacing needs adjustment, override styles in `_custom.scss`:
+If spacing, etc.., needs adjustment, override styles in `_custom.scss`:
 
 Example — Reduce vertical padding:
 
@@ -379,8 +366,8 @@ bundle exec jekyll serve
 
 ## 11. What This Migration Actually Changed
 
-- [Minima](https://datainsidedata.com/projects/jekyll-from-zero-to-production/) teaches you Jekyll.
-- Minimal Mistakes teaches you structure.
+- [Minima](https://datainsidedata.com/projects/jekyll-from-zero-to-production/) teaches one Jekyll.
+- Minimal Mistakes teaches one structure.
 
 The migration wasn’t just about a new theme — it was about adopting a framework that enforces discipline:
 
@@ -394,15 +381,15 @@ It introduces architecture.
 
 And architecture is what allows a site to scale — not just in size, but in clarity, maintainability, and professionalism.
 
-**If you migrate intentionally**:
+**If one migrate intentionally**:
 
 - Disable old overrides first  
 - Let defaults load cleanly  
 - Override only what you understand  
 - Keep changes incremental  
 
-You won't simply be switching themes.  
-You’ll be upgrading your system design.
+one won't simply be switching themes.  
+But instead be upgrading one's system design.
 
 That’s the real shift.
 

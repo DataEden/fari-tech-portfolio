@@ -1,21 +1,8 @@
----
-noteId: "f05509801fe611f194fd9f5d564fbc14"
-tags:
-  - "jekyll"
-  - "minima"
-  - "architecture"
-  - "ci-cd"
-  - "seo"
-  - "documentation"
-title: "Jekyll Build Notes: Layers 1–4"
-categories: []
-featured: false
-status: "completed"
-excerpt: "A workshop-ready, layered guide to how DataInsideData.com was built and hardened on Minima—future-proofed for Minimal Mistakes."
+# title: "Jekyll Build Notes: Layers 1–4"
 
----
+## A workshop-ready, layered guide to how DataInsideData.com was built and hardened on Minima—future-proofed for Minimal Mistakes."
 
-## Jekyll From Zero to Production (Minima‑first)
+## Introduction
 
 **Layers 1–4: Core mechanics → structure → navigation → production hardening**  
 _DataInsideData.com build notes (project-ready, workshop-friendly)_
