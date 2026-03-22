@@ -87,7 +87,7 @@ This project demonstrates practical platform thinking at the intersection of ana
 
 - **Live Site:** [DataInsideData.com](https://datainsidedata.com)
 - **Public Deployment Repository:** [did-site-public](https://github.com/DataEden/did-site-public)
-- **Monorepo Project Folder:** [DATAINSIDEDATA/](https://github.com/DataEden/fari-tech-portfolio/tree/main/DATAINSIDEDATA)
+- **Monorepo Project Folder:** [DATAINSIDEDATA/](https://github.com/DataEden/fari-tech-portfolio/tree/main/cloud-devops-engineering/datainsidedata/)
 
 ---
 
