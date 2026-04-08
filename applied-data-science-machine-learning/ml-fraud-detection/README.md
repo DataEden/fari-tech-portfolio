@@ -64,7 +64,7 @@ The long-term goal is ambitious: identify **99% of fraudulent activity** while m
 
 This creates an important analytical challenge:
 
-A naïve classifier can achieve very high accuracy by predicting every transaction as legitimate, but such a model would miss every fraudulent case.
+A naive classifier can achieve very high accuracy by predicting every transaction as legitimate, but such a model would miss every fraudulent case.
 
 The real task is therefore not just to build a classifier, but to build one that achieves **non-zero precision, recall, and sensitivity** in an imbalanced setting.
 
