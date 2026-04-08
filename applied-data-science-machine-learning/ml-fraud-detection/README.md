@@ -344,7 +344,7 @@ In fraud detection, recall and sensitivity are especially important because miss
 ## Repository Structure
 
 ```text
-applied-data-science-machine-learning/
+ml-fraud-detection/
 ├─ assets/
 │  ├─ charts/
 │  │  ├─ naive-flag-vs-actual-fraud-percentage.png
