@@ -1,0 +1,38 @@
+name: detect-fraud-ml  # Name of the environment
+
+channels:
+  # Community-maintained packages; often the most reliable for data/ML stacks
+  - conda-forge
+  # Default Anaconda channel
+  - defaults
+
+dependencies:
+  # Python version for the project
+  - python=3.11
+
+  # Notebook / interactive development environment
+  - jupyterlab
+  - notebook
+
+  # Core data manipulation
+  - pandas
+  - numpy
+
+  # Visualization
+  - matplotlib
+  - seaborn
+
+  # Machine learning library
+  - scikit-learn
+
+  # Imbalanced classification tools (SMOTE, KMeansSMOTE)
+  - imbalanced-learn
+
+  # Parallelism / CPU utilities
+  - joblib
+
+  # Pretty terminal / notebook table formatting
+  - tabulate
+
+  # Keep pip available in case you add any pip-only packages later
+  - pip

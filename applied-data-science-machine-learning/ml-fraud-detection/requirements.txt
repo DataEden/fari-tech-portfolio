@@ -1,0 +1,23 @@
+# Core data manipulation
+pandas
+numpy
+
+# Visualization
+matplotlib
+seaborn
+
+# Machine learning
+scikit-learn
+
+# Imbalanced learning / oversampling
+imbalanced-learn
+
+# Parallelism / CPU utilities
+joblib
+
+# Pretty terminal / notebook table formatting
+tabulate
+
+# Notebook environment
+jupyterlab
+notebook
