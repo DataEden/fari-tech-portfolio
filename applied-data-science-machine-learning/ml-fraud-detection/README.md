@@ -1,4 +1,4 @@
-# Detect Fraud — Transaction Fraud Classification Pipeline
+# ML Fraud Detection — Transaction Fraud Classification Pipeline
 
 <div align="center">
   <img src="file.png" alt="" width="900">
@@ -374,7 +374,7 @@ ml-fraud-detection/
 
 ```bash
 git clone https://github.com/dataeden/fari-tech-portfolio.git
-cd fari-tech-portfolio/applied-data-science-machine-learning
+cd fari-tech-portfolio/applied-data-science-machine-learning/ml-fraud-detection/
 ```
 
 ### Option A — Using venv
