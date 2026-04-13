@@ -8,11 +8,19 @@
 
 **Fari Lindo • DataInsideData™**
 
-**Role:** AI Engineer / Machine Learning Practitioner
+**Role:** Data Analyst & Applied AI Engineer
 
-Applied Machine Learning Case Study | Classification + Imbalanced Data + Model Evaluation
+Applied Supervised Machine Learning Case Study | Classification + Imbalanced Data + Model Evaluation
 
 ## Tech Stack
+
+![Problem](https://img.shields.io/badge/Problem-Fraud%20Detection-critical)
+![Classification](https://img.shields.io/badge/Task-Classification-222222)
+![Imbalanced Data](https://img.shields.io/badge/Imbalanced%20Data-222222)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-222222)
+![Supervised Learning](https://img.shields.io/badge/Supervised%20Learning-blue)
+
+---
 
 ![Python](https://img.shields.io/badge/Python-000000?logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-000000?logo=pandas&logoColor=white)
@@ -21,9 +29,6 @@ Applied Machine Learning Case Study | Classification + Imbalanced Data + Model E
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C)
 ![Seaborn](https://img.shields.io/badge/Seaborn-5B8FA8)
 ![Scikit Learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-222222)
-![Classification](https://img.shields.io/badge/Classification-222222)
-![Imbalanced Data](https://img.shields.io/badge/Imbalanced%20Data-222222)
 
 ---
 
@@ -230,7 +235,7 @@ The evaluation framework used here emphasizes practical fraud detection performa
 ### Figure 6: Model Comparison — With SMOTE vs Without SMOTE
 
 <div align="center">
-  <img src="assets/charts/" alt="Model Comparison With vs Without SMOTE" width="900"></div>
+  <img src="assets/charts/" alt="Model Comparison With SMOTE vs Without SMOTE" width="900"></div>
 
 *<div align="center">Comparison of model performance with and without SMOTE. This chart highlights the tradeoff between improved minority-class recall and the potential cost of reduced precision in an imbalanced fraud detection setting.</div>*
 
