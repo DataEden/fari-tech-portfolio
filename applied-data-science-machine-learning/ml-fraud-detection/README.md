@@ -218,16 +218,16 @@ The evaluation framework used here emphasizes practical fraud detection performa
 
 ---
 
-### Figure 5: Model Comparison Without SMOTE
+### Figure 5: Model Performance — Precision vs Recall (With SMOTE)
 
 <div align="center">
-  <img src="assets/charts/" alt="Confusion matrix with SMOTE" width="900"></div>
+  <img src="assets/charts/" alt="Precision vs Recall Model Comparison With SMOTE" width="900"></div>
 
 *<div align="center">Confusion matrix for the selected fraud detection model. This view shows how well the model identifies fraudulent cases relative to false positives and missed fraud using SMOTE.</div>*
 
 ---
 
-### Figure 6: Model Comparison — With vs Without SMOTE
+### Figure 6: Model Comparison — With SMOTE vs Without SMOTE
 
 <div align="center">
   <img src="assets/charts/" alt="Model Comparison With vs Without SMOTE" width="900"></div>
