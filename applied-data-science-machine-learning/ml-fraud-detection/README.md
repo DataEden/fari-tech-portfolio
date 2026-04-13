@@ -214,9 +214,7 @@ The evaluation framework used here emphasizes practical fraud detection performa
   <img src="assets/charts/model-performance-without-smote-precision-recall.png" alt="Precision vs Recall Model Comparison Without SMOTE" width="900">
 </div>
 
-*<div align="center">Comparison of model performance using fraud-class precision and recall without SMOTE. Random Forest and AdaBoost achieve perfect recall while maintaining high precision, indicating strong fraud detection capability with minimal false positives.
-Logistic Regression demonstrates perfect precision but significantly lower recall, highlighting a conservative model that avoids false alarms at the cost of missed fraud cases. K-Nearest Neighbors provides a more balanced tradeoff between precision and recall.
-This visualization emphasizes the importance of evaluating fraud detection models beyond accuracy, focusing instead on their ability to correctly identify rare fraudulent events.</div>*
+*<div align="center">Comparison of model performance using fraud-class precision and recall without SMOTE. Random Forest and AdaBoost achieve perfect recall while maintaining high precision, indicating strong fraud detection capability with minimal false positives. Logistic Regression demonstrates perfect precision but significantly lower recall, highlighting a conservative model that avoids false alarms at the cost of missed fraud cases. K-Nearest Neighbors provides a more balanced tradeoff between precision and recall. This visualization emphasizes the importance of evaluating fraud detection models beyond accuracy, focusing instead on their ability to correctly identify rare fraudulent events.</div>*
 
 ---
 
