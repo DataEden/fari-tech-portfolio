@@ -208,19 +208,31 @@ The evaluation framework used here emphasizes practical fraud detection performa
 
 ---
 
-### Figure 4: Final Model Confusion Matrix
+### Figure 4: Model Performance — Precision vs Recall (Without SMOTE)
 
 <div align="center">
-  <img src="assets/charts/final-model-confusion-matrix.png" alt="Final Model Confusion Matrix" width="900"></div>
+  <img src="assets/charts/model-performance-without-smote-precision-recall.png" alt="Precision vs Recall Model Comparison Without SMOTE" width="900">
+</div>
 
-*<div align="center">Confusion matrix for the selected fraud detection model. This view shows how well the model identifies fraudulent cases relative to false positives and missed fraud.</div>*
+*<div align="center">Comparison of model performance using fraud-class precision and recall without SMOTE. Random Forest and AdaBoost achieve perfect recall while maintaining high precision, indicating strong fraud detection capability with minimal false positives.
+Logistic Regression demonstrates perfect precision but significantly lower recall, highlighting a conservative model that avoids false alarms at the cost of missed fraud cases. K-Nearest Neighbors provides a more balanced tradeoff between precision and recall.
+This visualization emphasizes the importance of evaluating fraud detection models beyond accuracy, focusing instead on their ability to correctly identify rare fraudulent events.</div>*
 
 ---
 
-### Figure 5: Model Comparison — With vs Without SMOTE
+### Figure 5: Model Comparison Without SMOTE
 
 <div align="center">
-  <img src="assets/charts/model-comparison-smote-vs-no-smote.png" alt="Model Comparison With vs Without SMOTE" width="900"></div>
+  <img src="assets/charts/" alt="Confusion matrix with SMOTE" width="900"></div>
+
+*<div align="center">Confusion matrix for the selected fraud detection model. This view shows how well the model identifies fraudulent cases relative to false positives and missed fraud using SMOTE.</div>*
+
+---
+
+### Figure 6: Model Comparison — With vs Without SMOTE
+
+<div align="center">
+  <img src="assets/charts/" alt="Model Comparison With vs Without SMOTE" width="900"></div>
 
 *<div align="center">Comparison of model performance with and without SMOTE. This chart highlights the tradeoff between improved minority-class recall and the potential cost of reduced precision in an imbalanced fraud detection setting.</div>*
 
