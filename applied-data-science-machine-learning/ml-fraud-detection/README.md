@@ -1,7 +1,7 @@
 # ML Fraud Detection — Transaction Fraud Classification Pipeline
 
 <div align="center">
-  <img src="file.png" alt="" width="900">
+  <img src="assets/images/ml-fraud-detect-image.png" alt="" width="900">
 </div>
 
 > Part of the DataInsideData™ technical portfolio monorepo.
@@ -226,18 +226,18 @@ The evaluation framework used here emphasizes practical fraud detection performa
 ### Figure 5: Model Performance — Precision vs Recall (With SMOTE)
 
 <div align="center">
-  <img src="assets/charts/" alt="Precision vs Recall Model Comparison With SMOTE" width="900"></div>
+  <img src="assets/charts/model-performance-smote-precision-recall.png" alt="Precision vs Recall Model Comparison With SMOTE" width="900"></div>
 
-*<div align="center">Confusion matrix for the selected fraud detection model. This view shows how well the model identifies fraudulent cases relative to false positives and missed fraud using SMOTE.</div>*
+*<div align="center">Comparison of model performance using fraud-class precision and recall after applying SMOTE to address class imbalance. While recall improves across several models—indicating better detection of fraudulent transactions—this often comes at the cost of reduced precision, meaning more false positives. Logistic Regression shows a significant increase in recall but with very low precision, reflecting an aggressive detection strategy. K-Nearest Neighbors also improves recall but sacrifices precision. Random Forest and AdaBoost maintain strong performance, demonstrating resilience even after resampling. This highlights the tradeoff introduced by SMOTE when prioritizing fraud detection over false alarm control.</div>*
 
 ---
 
 ### Figure 6: Model Comparison — With SMOTE vs Without SMOTE
 
 <div align="center">
-  <img src="assets/charts/" alt="Model Comparison With SMOTE vs Without SMOTE" width="900"></div>
+  <img src="assets/charts/model-performance-smote-vs-no-smote.png" alt="Model Comparison With SMOTE vs Without SMOTE" width="900"></div>
 
-*<div align="center">Comparison of model performance with and without SMOTE. This chart highlights the tradeoff between improved minority-class recall and the potential cost of reduced precision in an imbalanced fraud detection setting.</div>*
+*<div align="center">Direct comparison of model performance with and without SMOTE, visualized in precision–recall space. Each model appears twice, allowing for clear observation of how resampling shifts performance. In general, SMOTE moves models toward higher recall, improving their ability to detect rare fraudulent cases, but often reduces precision due to an increase in false positives. This tradeoff is especially pronounced in Logistic Regression and KNN. Random Forest and AdaBoost show more stability, remaining near the optimal top-right region. This visualization demonstrates that the choice between SMOTE and non-SMOTE workflows depends on the desired balance between fraud detection sensitivity and alert accuracy.</div>*
 
 ---
 
