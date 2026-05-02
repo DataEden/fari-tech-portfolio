@@ -246,11 +246,11 @@ Handles review classification using the OpenAI API.
 
 **Responsibilities**:
 
-Validate input format.
-Build the system prompt.
-Send review text to the model.
-Return sentiment labels.
-Guard against malformed or mismatched outputs.
+- Validate input format.
+- Build the system prompt.
+- Send review text to the model.
+- Return sentiment labels.
+- Guard against malformed or mismatched outputs.
 
 `main.py`
 
@@ -258,11 +258,11 @@ Runs the end-to-end pipeline.
 
 **Responsibilities**:
 
-Load review data from JSON.
-Extract review text.
-Call the labeling function.
-Save generated sentiment labels.
-Return the final label list.
+- Load review data from JSON.
+- Extract review text.
+- Call the labeling function.
+- Save generated sentiment labels.
+- Return the final label list.
 
 `visualize.py`
 
@@ -270,49 +270,49 @@ Generates a sentiment distribution chart.
 
 **Responsibilities**:
 
-Count each sentiment category.
-Create a visualization.
-Save the chart to the images/ folder.
-Methods & Analytical Framework
+- Count each sentiment category.
+- Create a visualization.
+- Save the chart to the images/ folder.
+- Methods & Analytical Framework
 
 **This project applies**:
 
-API-based text classification
-Prompt engineering
-JSON file handling
-Sentiment category design
-Test-driven development
-Basic model evaluation
-Error inspection
-Data visualization
+- API-based text classification
+- Prompt engineering
+- JSON file handling
+- Sentiment category design
+- Test-driven development
+- Basic model evaluation
+- Error inspection
+- Data visualization
 
 ## Limitations
 
 This project is an MVP and has several limitations:
 
-Small review sample size
-No human-labeled benchmark comparison
-Limited sentiment categories
-Possible model hallucinations
-Output inconsistency risk
-No confidence scores
-No batch retry or rate-limit handling
-No production logging or monitoring layer
+- Small review sample size
+- No human-labeled benchmark comparison
+- Limited sentiment categories
+- Possible model hallucinations
+- Output inconsistency risk
+- No confidence scores
+- No batch retry or rate-limit handling
+- No production logging or monitoring layer
 
 ## Future Improvements
 
 Future versions could include:
 
-Human-labeled validation data
-Accuracy, precision, recall, and confusion matrix reporting
-Confidence scoring
-Better review preprocessing
-Batch processing with retries
-Structured JSON schema enforcement
-Prompt version tracking
-Model comparison across multiple OpenAI models
-Dashboard for review trends
-Topic modeling to identify common complaint themes
+- Human-labeled validation data
+- Accuracy, precision, recall, and confusion matrix reporting
+- Confidence scoring
+- Better review preprocessing
+- Batch processing with retries
+- Structured JSON schema enforcement
+- Prompt version tracking
+- Model comparison across multiple OpenAI models
+- Dashboard for review trends
+- Topic modeling to identify common complaint themes
 
 ## Production Readiness Reflection
 
@@ -320,13 +320,13 @@ This project demonstrates how quickly an LLM-powered labeling workflow can be pr
 
 However, for production use, the system would need stronger safeguards:
 
-Deterministic structured output
-Input cleaning and normalization
-Rate-limit handling
-Error logging
-Review-label alignment validation
-Human review loop for uncertain labels
-Monitoring for model drift or inconsistent outputs
+- Deterministic structured output
+- Input cleaning and normalization
+- Rate-limit handling
+- Error logging
+- Review-label alignment validation
+- Human review loop for uncertain labels
+- Monitoring for model drift or inconsistent outputs
 
 The biggest takeaway is that LLMs are powerful for classification support, but they should be wrapped inside a reliable software and evaluation layer.
 
