@@ -489,4 +489,6 @@ Open any notebook inside `notebooks/` and execute cells directly within VS Code.
 - [LinkedIn](https://www.linkedin.com/in/fari-lindo/)  
 - [Email](mailto:contact@datainsidedata.com)
 
-*Tech Hands, a Science Mind, and a Heart for Community™*
+*Data Inside Data™*.
+
+*Tech Hands, a Science Mind, and a Heart for Community™*.
