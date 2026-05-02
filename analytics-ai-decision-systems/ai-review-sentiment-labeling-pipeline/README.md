@@ -1,9 +1,3 @@
----
-noteId: "fd531bd045b711f1be3667c782730987"
-tags: []
-
----
-
 <div align="center">
   <img src="images/pexels_abdul_kayum.jpg" alt="Digital image" width="800">
 
