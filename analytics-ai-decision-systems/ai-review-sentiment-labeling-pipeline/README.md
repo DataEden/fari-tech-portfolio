@@ -153,7 +153,7 @@ images/sentiment_distribution.png
 
 ### Sentiment Distribution
 
-![Sentiment Distribution Viz](images/sentiment_plot.png)
+![Sentiment Distribution Viz](images/sentiment_plot1.png)
 
 *<div align="center"> The visualization summarizes the frequency of each sentiment label returned by the OpenAI-powered classification pipeline. </div>*
 
