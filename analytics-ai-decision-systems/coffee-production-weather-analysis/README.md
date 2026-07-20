@@ -480,6 +480,171 @@ Open any notebook inside `notebooks/` and execute cells directly within VS Code.
 
 ---
 
+## Future Work
+
+Future iterations of this project should expand both the geographic scope and the level of detail in the underlying datasets. The current analysis uses annual production and growing-season weather aggregates for Minas Gerais from 2002–2023. While this provides a useful high-level comparison between structural and climatic drivers, broader and more granular data would allow the system to capture short-term stress events, regional differences, delayed effects, and interactions that are not visible in annual averages.
+
+### Expand the Geographic and Temporal Scope
+
+A more representative dataset could include:
+
+- additional coffee-producing states and municipalities within Brazil
+- farm-level or county-level observations within Minas Gerais
+- a longer historical period
+- monthly, weekly, or daily weather measurements
+- multiple harvest cycles and growing seasons
+- separate observations for major coffee varieties and cultivation systems
+
+Expanding beyond a single regional time series would increase the number of observations and make it possible to compare how structural and climatic drivers differ across locations, elevations, farm sizes, and production systems.
+
+### Add Coffee Leaf Rust Data
+
+A major limitation of the current dataset is the absence of direct information about coffee leaf rust, or *Hemileia vastatrix*. Future versions should incorporate observations such as:
+
+- leaf rust infection rates
+- outbreak dates and duration
+- disease severity levels
+- percentage of affected plants or cultivated area
+- fungicide application frequency
+- resistant coffee varieties
+- crop losses attributed to infection
+- recovery time following an outbreak
+
+Leaf rust data would provide a direct measure of biological crop stress that cannot be inferred reliably from production totals or weather aggregates alone. Adding these observations would make it possible to test whether temperature, rainfall, humidity, and wind conditions are associated with disease prevalence and whether leaf rust acts as an intermediate pathway between climate conditions and production outcomes.
+
+### Add More Detailed Climate Indicators
+
+Future climate data should move beyond annual averages and maximum values to include:
+
+- total monthly rainfall
+- number of consecutive dry days
+- rainfall intensity and distribution
+- drought indices such as SPI or SPEI
+- soil moisture
+- minimum and maximum temperature extremes
+- heatwave frequency
+- nighttime temperature
+- relative humidity variability
+- frost events
+- solar radiation
+- evapotranspiration
+- elevation and microclimate conditions
+
+These variables may reveal nonlinear or threshold effects that annual averages cannot detect. For example, total annual rainfall may appear adequate even when rainfall arrives outside critical flowering or fruit-development periods.
+
+### Add Agricultural Management Variables
+
+A broader system should also include management and production inputs such as:
+
+- fertilizer type and application rates
+- irrigation availability
+- pesticide and fungicide use
+- pruning cycles
+- plant age
+- tree density
+- shade-management practices
+- soil type and nutrient levels
+- mechanization
+- labor availability
+- adoption of disease-resistant varieties
+
+These variables would help distinguish true climate effects from differences in farm management, technology, and production strategy.
+
+### Add Economic and Market Data
+
+Production decisions may also respond to economic conditions. Future analysis could include:
+
+- domestic and international coffee prices
+- export demand
+- exchange rates
+- input costs
+- labor costs
+- transportation costs
+- access to credit
+- crop insurance
+- government assistance
+- investment in irrigation and farm infrastructure
+
+Including these indicators would help explain why bearing-tree counts, cultivated hectares, or production capacity change over time.
+
+### Increase the Number of Data Points
+
+The current annual dataset contains a relatively small number of observations, which limits statistical power and the complexity of models that can be applied reliably.
+
+A future dataset should aim for:
+
+- monthly observations across multiple regions
+- farm-level panel data
+- repeated observations across several growing seasons
+- separate records for weather, disease, management, and production
+- clearly aligned dates and geographic identifiers
+
+For example, combining 20 years of monthly data across 20 municipalities could produce thousands of observations instead of a single annual regional series. This would support more realistic modeling and more reliable validation.
+
+### Expand the Analytical Methods
+
+With a larger and more detailed dataset, future work could evaluate:
+
+- lagged weather effects
+- nonlinear relationships
+- interaction effects
+- multivariate regression
+- fixed-effects or random-effects panel models
+- time-series forecasting
+- change-point detection
+- spatial analysis
+- disease-risk classification
+- tree-based machine-learning models
+- model comparison and cross-validation
+
+Particular attention should be given to interactions between climate and disease. A future model could test whether humidity and temperature increase leaf rust risk and whether disease prevalence subsequently reduces yield.
+
+### Proposed Future Data Model
+
+A more complete analytical dataset could include one row per location and time period, with fields such as:
+
+```text
+date
+year
+month
+state
+municipality
+latitude
+longitude
+elevation
+coffee_variety
+bearing_trees
+bearing_hectares
+production_60kg_bags
+yield_per_hectare
+rainfall_total
+consecutive_dry_days
+temp_avg
+temp_min
+temp_max
+humidity_avg
+soil_moisture
+drought_index
+frost_event
+leaf_rust_rate
+leaf_rust_severity
+fungicide_use
+fertilizer_use
+irrigation_status
+coffee_price
+export_demand
+```
+
+This structure would support a more realistic view of coffee production as the outcome of interacting structural, climatic, biological, managerial, and economic forces.
+
+### Long-Term Goal
+
+The long-term goal is to evolve this project from a regional correlation study into a broader coffee-production risk and forecasting system. Such a system could evaluate how production capacity, weather stress, coffee leaf rust, farm management, and market conditions interact across regions and growing seasons.
+
+This expanded approach would provide a more realistic foundation for estimating production risk, identifying vulnerable periods, comparing regional resilience, and supporting future forecasting or decision-support tools.
+
+---
+
 ## Contact
 
 #### Fari Lindo • DataInsideData™
