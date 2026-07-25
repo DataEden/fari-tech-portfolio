@@ -59,6 +59,12 @@ Although a gradual decline in minimum humidity was observed, no statistically si
 
 ---
 
+## Intended Audience
+
+This project is designed for data analysts, agricultural researchers, policy stakeholders, and technical recruiters interested in applied statistical analysis, climate-risk research, and reproducible data workflows.
+
+---
+
 ## 📊 Visual Evidence — Climatic Trend Analysis
 
 ### Maximum Temperature Trend (Rolling Average)
@@ -477,6 +483,26 @@ Select the project virtual environment:
 - Choose the `venv` environment created earlier.
 
 Open any notebook inside `notebooks/` and execute cells directly within VS Code.
+
+## Usage
+
+After installing the project dependencies, open the notebooks in the following order:
+
+1. `explore_weather.ipynb`
+2. `explore_coffee.ipynb`
+3. `analysis.ipynb`
+
+The workflow loads the source datasets, prepares the annual weather and coffee-production observations, generates exploratory charts, and calculates the statistical relationships reported in this README.
+
+## Example Output
+
+Running the analysis produces:
+
+- weather trend charts
+- bearing-tree and hectare trend visualizations
+- weather-to-yield correlation results
+- structural capacity comparisons
+- quartile-based yield elasticity findings
 
 ---
 
