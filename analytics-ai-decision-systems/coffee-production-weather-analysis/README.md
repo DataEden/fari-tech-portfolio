@@ -363,29 +363,57 @@ coffee-production-weather-analysis/
 
 ---
 
-## Methods & Analytical Framework
+## Methods
 
 This analysis applies the following statistical techniques:
 
-- Pearson Correlation (`scipy.stats.pearsonr`)
-- Shapiro-Wilk Normality Test
+- Pearson correlation using `scipy.stats.pearsonr`
+- Shapiro-Wilk normality testing
 - Time-series trend evaluation
-- Quartile stratification (yield elasticity analysis)
+- Quartile stratification for yield-elasticity analysis
 - Linear regression overlays
+- Comparative analysis of structural and climatic variables
 
-### Modeling Scope & Assumptions
+The workflow was implemented in Python using:
 
-This study evaluates **linear associations only** using Pearson correlation and regression overlays. It does not test nonlinear relationships, interaction effects, or lagged climatic impacts across growing seasons.
+- pandas for data preparation and tabular analysis
+- SciPy for statistical testing
+- Matplotlib and Seaborn for static visualizations
+- Plotly Express for interactive exploratory visualization
 
-Findings should therefore be interpreted within the context of annual-resolution linear modeling.
+## Analytical Framework
 
-### Libraries Used
+The analysis compares two groups of potential coffee-production drivers:
 
-- pandas
-- scipy
-- matplotlib
-- seaborn
-- plotly.express
+### Climatic Drivers
+
+- rainfall
+- average, minimum, and maximum temperature
+- minimum and maximum humidity
+- average and maximum wind speed
+
+### Structural Drivers
+
+- bearing trees
+- nonbearing trees
+- bearing hectares
+- annual production measured in 60-kilogram bags
+
+The framework evaluates:
+
+1. Whether individual variables demonstrate meaningful trends over time.
+2. Whether growing-season weather aggregates are linearly associated with annual coffee production.
+3. Whether structural capacity variables have stronger relationships with production than climatic indicators.
+4. Whether production responses vary across structural-capacity quartiles.
+5. Which data and modeling limitations prevent stronger causal or predictive conclusions.
+
+---
+
+### Modeling Scope and Assumptions
+
+This study evaluates linear associations using Pearson correlation and regression overlays. It does not test nonlinear relationships, interaction effects, causal relationships, or lagged climatic effects across growing seasons.
+
+The findings should therefore be interpreted as evidence of statistical association within an annual-resolution dataset—not as proof that climatic conditions have no effect on coffee production
 
 ---
 
