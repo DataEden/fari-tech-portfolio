@@ -1,0 +1,29 @@
+{
+  "Random Forest": {
+    "n_estimators": 400,
+    "min_samples_split": 20,
+    "max_features": "log2",
+    "max_depth": 35,
+    "criterion": "log_loss"
+  },
+  "AdaBoost": {
+    "n_estimators": 50,
+    "learning_rate": 0.1,
+    "estimator__min_samples_split": 2,
+    "estimator__min_samples_leaf": 1,
+    "estimator__max_depth": 3
+  },
+  "Logistic Reg": {
+    "solver": "saga",
+    "penalty": "l2",
+    "max_iter": 1500,
+    "C": 10.0
+  },
+  "KNN": {
+    "weights": "distance",
+    "p": 2,
+    "n_neighbors": 3,
+    "leaf_size": 30,
+    "algorithm": "auto"
+  }
+}
